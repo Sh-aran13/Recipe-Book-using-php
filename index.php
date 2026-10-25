@@ -191,7 +191,7 @@ include __DIR__ . '/includes/header.php';
                 <h2 class="section-heading">Most Popular Recipes</h2>
                 <p class="section-subheading">Timeless homestyle dishes that make every meal feel like a warm hug.</p>
             </div>
-            <a href="recipes.php" class="btn btn-secondary">View All Recipes (<?= count($all_recipes) ?>) →</a>
+            <a href="recipes.php" class="btn btn-secondary">View All Recipes (<?= count($recipes) ?>) →</a>
         </div>
 
         <div class="recipes-grid">
