@@ -55,7 +55,7 @@ include __DIR__ . '/includes/header.php';
             <?= $category ? h($category) : "All Amma's Recipes" ?>
         </h1>
         <p style="color: var(--text-muted); font-size: 16px; max-width: 650px;">
-            <?= $category ? "Delicious authentic dishes under the " . h($category) . " collection." : "Browse through 42 complete, easy-to-follow authentic recipes." ?>
+            <?= $category ? "Delicious authentic dishes under the " . h($category) . " collection." : "Browse through " . count($all_recipes) . " complete, easy-to-follow authentic recipes." ?>
         </p>
 
         <!-- MAIN SEARCH & FILTER BAR -->

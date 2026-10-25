@@ -672,17 +672,31 @@ if (!isset($current_page)) {
                 </div>
                 <div class="logo-text-wrap">
                     <div class="site-title">Amma's <span>Recipe Book</span></div>
-                    <div class="site-tagline">Homestyle Digital Companion</div>
+                    <div class="site-tagline">Master Chef Academy</div>
                 </div>
             </a>
 
             <!-- DESKTOP NAVIGATION -->
             <nav class="main-nav" role="navigation" aria-label="Main Navigation">
                 <a href="index.php" class="nav-link <?= $current_page === 'home' ? 'active' : '' ?>">Home</a>
-                <a href="recipes.php" class="nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">All Recipes</a>
-                <a href="categories.php" class="nav-link <?= $current_page === 'categories' ? 'active' : '' ?>">Categories</a>
+                <a href="academy.php" class="nav-link <?= $current_page === 'academy' ? 'active' : '' ?>" style="<?= $current_page === 'academy' ? 'color: #C2410C; font-weight: 700;' : '' ?>">
+                    <span>🎓 Academy</span>
+                </a>
+                <a href="what-can-i-cook.php" class="nav-link <?= $current_page === 'what_can_i_cook' ? 'active' : '' ?>">
+                    <span>🥕 Pantry</span>
+                </a>
+                <a href="recipes.php" class="nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">Recipes (75)</a>
+                <a href="knowledge-centre.php" class="nav-link <?= $current_page === 'knowledge_centre' ? 'active' : '' ?>" title="Cooking Science, Ingredients & Troubleshooting">
+                    <span>💡 Science & Tips</span>
+                </a>
+                <a href="quiz.php" class="nav-link <?= $current_page === 'quiz' ? 'active' : '' ?>" title="Cooking Knowledge Quiz">
+                    <span>❓ Quiz</span>
+                </a>
+                <a href="progress.php" class="nav-link <?= $current_page === 'progress' ? 'active' : '' ?>" title="My Learning Progress & Cookbook">
+                    <span>📊 Progress</span>
+                </a>
                 <a href="favorites.php" class="nav-link <?= $current_page === 'favorites' ? 'active' : '' ?>">
-                    <span>Favorites</span>
+                    <span>❤️</span>
                     <span class="fav-count-pill" id="headerFavBadge" style="display:none;">0</span>
                 </a>
             </nav>
@@ -715,7 +729,12 @@ if (!isset($current_page)) {
                 <input type="text" name="q" class="header-search-input" placeholder="Search recipes or ingredients..." style="width: 100%; border-radius: var(--radius-md);">
             </form>
             <a href="index.php" class="mobile-nav-link <?= $current_page === 'home' ? 'active' : '' ?>">🏠 Home</a>
-            <a href="recipes.php" class="mobile-nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">📖 All Recipes (42)</a>
+            <a href="academy.php" class="mobile-nav-link <?= $current_page === 'academy' ? 'active' : '' ?>" style="font-weight: 700; color: var(--primary);">🎓 Master Chef Academy</a>
+            <a href="what-can-i-cook.php" class="mobile-nav-link <?= $current_page === 'what_can_i_cook' ? 'active' : '' ?>">🥕 What Can I Cook? (Pantry Finder)</a>
+            <a href="knowledge-centre.php" class="mobile-nav-link <?= $current_page === 'knowledge_centre' ? 'active' : '' ?>">💡 Cooking Knowledge Centre</a>
+            <a href="quiz.php" class="mobile-nav-link <?= $current_page === 'quiz' ? 'active' : '' ?>">❓ Cooking Quiz</a>
+            <a href="progress.php" class="mobile-nav-link <?= $current_page === 'progress' ? 'active' : '' ?>">📊 My Learning Progress</a>
+            <a href="recipes.php" class="mobile-nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">📖 All Recipes (75)</a>
             <a href="categories.php" class="mobile-nav-link <?= $current_page === 'categories' ? 'active' : '' ?>">📂 Categories</a>
             <a href="favorites.php" class="mobile-nav-link <?= $current_page === 'favorites' ? 'active' : '' ?>">
                 <span>❤️ My Saved Favorites</span>

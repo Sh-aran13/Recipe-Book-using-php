@@ -30,11 +30,14 @@
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
                         <li><a href="index.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">🏠 Home Page</a></li>
-                        <li><a href="recipes.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">📖 Browse All 42 Recipes</a></li>
+                        <li><a href="academy.php" style="color: #FDBA74; font-weight: 700; transition: var(--transition);" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='#FDBA74'">🎓 Master Chef Academy</a></li>
+                        <li><a href="what-can-i-cook.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">🥕 What Can I Cook? (Pantry Matcher)</a></li>
+                        <li><a href="knowledge-centre.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">💡 Cooking Knowledge & Troubleshooting</a></li>
+                        <li><a href="quiz.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">❓ Culinary Knowledge Quiz</a></li>
+                        <li><a href="progress.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">📊 Personal Cookbook & Progress</a></li>
+                        <li><a href="recipes.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">📖 Browse All 75 Recipes</a></li>
                         <li><a href="categories.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">📂 Recipe Categories (15)</a></li>
                         <li><a href="favorites.php" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">❤️ My Saved Favorites</a></li>
-                        <li><a href="recipes.php?filter=quick" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">⏱️ Quick Meals (Under 30 mins)</a></li>
-                        <li><a href="recipes.php?cat=Andhra+Specialities" style="color: #D6D3D1; transition: var(--transition);" onmouseover="this.style.color='#FB923C'" onmouseout="this.style.color='#D6D3D1'">🌶️ Authentic Andhra Specialities</a></li>
                     </ul>
                 </div>
 

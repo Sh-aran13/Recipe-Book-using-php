@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/recipe-data.php';
+require_once __DIR__ . '/includes/academy-data.php';
 
 // Validate recipe ID from GET
 $id = trim($_GET['id'] ?? '');
@@ -27,7 +28,7 @@ if (!$recipe) {
             </p>
             <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                 <a href="recipes.php" class="btn btn-primary" style="padding: 12px 28px;">
-                    Browse All Recipes (42)
+                    Browse All Recipes
                 </a>
                 <a href="index.php" class="btn btn-secondary">
                     Back to Home
@@ -61,6 +62,7 @@ $tips = $recipe['tips'] ?? [];
 $substitutions = $recipe['substitutions'] ?? [];
 $storage = !empty($recipe['storage']) ? h($recipe['storage']) : '';
 $relatedRecipes = get_related_recipes($recipe, 3);
+$relatedLessons = get_related_lessons_for_recipe($recipe);
 
 $page_title = "{$name} Recipe — Amma's Recipe Book";
 $current_page = 'recipes';
@@ -512,6 +514,100 @@ include __DIR__ . '/includes/header.php';
 
             </div>
 
+            <!-- RECIPE MASTERY CHECKLIST & STATUS (Requirement 14) -->
+            <div id="recipeMasterySection" style="background: #FFF; border: 2px solid var(--border-warm); border-radius: var(--radius-xl); padding: 24px 28px; margin-bottom: 36px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1px dashed var(--border-warm); padding-bottom: 14px;">
+                    <div>
+                        <div style="font-size: 12px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.8px;">
+                            Culinary Skill Progression
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--earth-brown);">
+                            Recipe Mastery Checklist
+                        </h3>
+                    </div>
+
+                    <!-- STATUS SELECTOR: LEARNING, PRACTICED, MASTERED -->
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button type="button" class="mastery-status-btn" data-status="Learning" style="padding: 6px 14px; border-radius: var(--radius-pill); border: 1.5px solid #FDE68A; background: #FFFBEB; color: #B45309; font-weight: 700; font-size: 13px; cursor: pointer; transition: var(--transition);">
+                            🌱 Learning
+                        </button>
+                        <button type="button" class="mastery-status-btn" data-status="Practiced" style="padding: 6px 14px; border-radius: var(--radius-pill); border: 1.5px solid #BFDBFE; background: #EFF6FF; color: #1D4ED8; font-weight: 700; font-size: 13px; cursor: pointer; transition: var(--transition);">
+                            🍳 Practiced
+                        </button>
+                        <button type="button" class="mastery-status-btn" data-status="Mastered" style="padding: 6px 14px; border-radius: var(--radius-pill); border: 1.5px solid #86EFAC; background: #F0FDF4; color: #15803D; font-weight: 700; font-size: 13px; cursor: pointer; transition: var(--transition);">
+                            👑 Mastered
+                        </button>
+                    </div>
+                </div>
+
+                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 16px;">
+                    Track your personal confidence preparing this dish. Check each milestone as you practice:
+                </p>
+
+                <!-- 6 MASTERY CHECKLIST ITEMS -->
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="0" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I understand the ingredients and flavor roles.</span>
+                    </label>
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="1" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I understand the step-by-step preparation flow.</span>
+                    </label>
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="2" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I have organized and measured all ingredients (Mise en place).</span>
+                    </label>
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="3" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I have successfully cooked this recipe at least once.</span>
+                    </label>
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="4" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I understand common mistakes and how to avoid/fix them.</span>
+                    </label>
+                    <label class="mastery-check-item" style="display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-main); cursor: pointer;">
+                        <input type="checkbox" class="mastery-chk" data-idx="5" style="width: 17px; height: 17px; accent-color: var(--primary);">
+                        <span>I can prepare this recipe confidently without looking at steps.</span>
+                    </label>
+                </div>
+
+                <div id="masteryStatusFeedback" style="font-size: 13.5px; font-weight: 700; color: var(--primary); padding-top: 8px; border-top: 1px dashed var(--border-warm);">
+                    Current Status: None selected
+                </div>
+            </div>
+
+            <!-- RELATED ACADEMY LESSONS SECTION -->
+            <?php if (!empty($relatedLessons)): ?>
+                <div id="relatedLessonsBox" style="background: #FFF8EE; border: 1.5px solid #FDBA74; border-radius: var(--radius-xl); padding: 24px; margin-bottom: 36px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span class="section-eyebrow" style="color: #C2410C;">Recommended Academy Guidance</span>
+                            <h4 style="font-family: var(--font-serif); font-size: 19px; color: var(--earth-brown);">
+                                Lessons to Build Confidence in This Dish
+                            </h4>
+                        </div>
+                        <a href="academy.php" style="font-size: 13px; font-weight: 700; color: var(--primary);">Explore Academy →</a>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+                        <?php foreach ($relatedLessons as $rLsn): ?>
+                            <a href="lesson.php?id=<?= urlencode($rLsn['id']) ?>" style="background: #FFF; border: 1px solid var(--border-warm); border-radius: var(--radius-md); padding: 14px 16px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; transition: var(--transition);" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border-warm)'">
+                                <span style="font-size: 26px;"><?= $rLsn['icon'] ?? '📖' ?></span>
+                                <div>
+                                    <div style="font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase;">
+                                        <?= h($rLsn['category'] ?? 'Lesson') ?>
+                                    </div>
+                                    <div style="font-size: 14px; font-weight: 700; color: var(--earth-brown); line-height: 1.3;">
+                                        <?= h($rLsn['title']) ?>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <!-- SERVING SUGGESTIONS -->
             <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-md); padding: 20px; margin-bottom: 40px;">
                 <h4 style="font-size: 16px; font-weight: 700; color: #166534; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
@@ -548,18 +644,21 @@ include __DIR__ . '/includes/header.php';
 <div id="cookingModeModal" role="dialog" aria-modal="true" aria-labelledby="cookingModeTitle">
     
     <!-- COOKING MODE TOP HEADER -->
-    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--border-warm); padding-bottom: 16px; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--border-warm); padding-bottom: 16px; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
         <div>
             <div style="font-size: 13px; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
-                Distraction-Free Cooking Mode
+                Interactive Cooking Mode
             </div>
             <h2 id="cookingModeTitle" style="font-family: var(--font-serif); font-size: 24px; color: var(--earth-brown);">
                 <?= $name ?>
             </h2>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 16px;">
-            <span style="font-size: 15px; font-weight: 600; color: var(--text-muted);">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <button type="button" id="btnToggleIngredientsList" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13.5px; border-radius: var(--radius-pill);">
+                📋 View Ingredients
+            </button>
+            <span style="font-size: 14.5px; font-weight: 600; color: var(--text-muted); background: var(--bg-warm); padding: 6px 14px; border-radius: var(--radius-pill); border: 1px solid var(--border-warm);">
                 👥 <span id="cookingModeServingCount"><?= $defaultServings ?></span> Servings
             </span>
             <button type="button" id="btnExitCookingMode" class="btn btn-secondary" style="padding: 8px 18px; border-radius: var(--radius-pill); font-size: 14px;">
@@ -568,8 +667,20 @@ include __DIR__ . '/includes/header.php';
         </div>
     </div>
 
+    <!-- INGREDIENTS CHECKLIST DRAWER (MODAL COMPACT VIEW) -->
+    <div id="cookingModalIngDrawer" style="display: none; background: #FFF; border: 2px solid #FED7AA; border-radius: var(--radius-lg); padding: 18px 22px; margin-bottom: 20px; max-height: 220px; overflow-y: auto;">
+        <h4 style="font-size: 15px; font-weight: 700; color: var(--earth-brown); margin-bottom: 10px;">
+            Ingredients Checklist for <?= $name ?>:
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; font-size: 14px;">
+            <?php foreach ($ingredients as $mIng): ?>
+                <div>• <strong><?= !empty($mIng['quantity']) ? $mIng['quantity'] . ' ' : '' ?><?= h($mIng['unit'] ?? '') ?></strong> <?= h($mIng['name']) ?></div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+
     <!-- PROGRESS BAR -->
-    <div style="margin-bottom: 30px;">
+    <div style="margin-bottom: 24px;">
         <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: var(--earth-brown); margin-bottom: 8px;">
             <span id="cookingStepCounter">Step 1 of <?= count($steps) ?></span>
             <span id="cookingStepPercent">0% Completed</span>
@@ -580,36 +691,49 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <!-- LARGE STEP TEXT CONTAINER -->
-    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-        <div style="background: #FFF; border: 2px solid #FED7AA; border-radius: var(--radius-xl); padding: clamp(24px, 5vw, 48px); max-width: 820px; width: 100%; box-shadow: var(--shadow-hover); text-align: center;">
-            <div id="modalStepNumberBadge" style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary); color: #FFF; font-family: var(--font-serif); font-size: 26px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(194, 65, 12, 0.3);">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px 0;">
+        <div style="background: #FFF; border: 2px solid #FED7AA; border-radius: var(--radius-xl); padding: clamp(24px, 5vw, 42px); max-width: 860px; width: 100%; box-shadow: var(--shadow-hover); text-align: center;">
+            <div id="modalStepNumberBadge" style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary); color: #FFF; font-family: var(--font-serif); font-size: 26px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(194, 65, 12, 0.3);">
                 1
             </div>
             
-            <p id="modalStepInstructionText" style="font-size: clamp(20px, 3vw, 28px); line-height: 1.6; color: var(--earth-brown); font-family: var(--font-serif); margin-bottom: 28px;">
+            <p id="modalStepInstructionText" style="font-size: clamp(20px, 3.2vw, 28px); line-height: 1.6; color: var(--earth-brown); font-family: var(--font-serif); margin-bottom: 24px;">
                 <!-- Filled dynamically by JavaScript -->
             </p>
+
+            <!-- STEP ACTIONS: REPEAT STEP & IN-STEP COOKING TIMER -->
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <button type="button" id="btnRepeatStep" class="btn btn-secondary" style="padding: 6px 16px; font-size: 13.5px; border-radius: var(--radius-pill);">
+                    🔁 Repeat This Step
+                </button>
+                <button type="button" id="btnModalTimerQuick5" class="btn btn-secondary" style="padding: 6px 16px; font-size: 13.5px; border-radius: var(--radius-pill);">
+                    ⏱️ Quick 5 Min Timer (<span id="modalTimerDisplay">05:00</span>)
+                </button>
+            </div>
 
             <div id="completionCelebration" style="display: none; background: #ECFDF5; border: 2px solid #10B981; border-radius: var(--radius-lg); padding: 24px; margin-top: 16px;">
                 <div style="font-size: 48px; margin-bottom: 8px;">🎉🍲</div>
                 <h3 style="font-family: var(--font-serif); font-size: 24px; color: #065F46; margin-bottom: 6px;">
                     Recipe Complete!
                 </h3>
-                <p style="color: #047857; font-size: 16px;">
+                <p style="color: #047857; font-size: 16px; margin-bottom: 16px;">
                     Amma, your delicious <strong><?= $name ?></strong> is ready to serve. Enjoy your warm meal with family!
                 </p>
+                <button type="button" id="btnCelebrationMarkMastered" class="btn btn-primary" style="padding: 8px 20px; border-radius: var(--radius-pill); font-size: 14px;">
+                    👑 Mark as Mastered Recipe
+                </button>
             </div>
         </div>
     </div>
 
     <!-- COOKING MODE CONTROLS: PREVIOUS, NEXT, COMPLETE -->
-    <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1.5px solid var(--border-warm); padding-top: 20px; margin-top: 20px; gap: 16px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1.5px solid var(--border-warm); padding-top: 18px; margin-top: 16px; gap: 16px; flex-wrap: wrap;">
         <button type="button" id="btnPrevStep" class="btn btn-secondary" style="padding: 12px 28px; font-size: 16px;">
             ← Previous Step
         </button>
 
-        <button type="button" id="btnMarkComplete" class="btn btn-secondary" style="display: none; background: #ECFDF5; color: #047857; border-color: #A7F3D0; font-weight: 700;">
-            ✓ Mark Finished
+        <button type="button" id="btnMarkComplete" class="btn btn-secondary" style="display: none; background: #ECFDF5; color: #047857; border-color: #A7F3D0; font-weight: 700; padding: 12px 28px; font-size: 16px;">
+            ✓ Mark Recipe Complete
         </button>
 
         <button type="button" id="btnNextStep" class="btn btn-primary" style="padding: 12px 32px; font-size: 16px;">
@@ -747,21 +871,33 @@ include __DIR__ . '/includes/header.php';
             }
         });
 
-        // 5. DISTRACTION-FREE COOKING MODE
+        // 5. DISTRACTION-FREE & INTERACTIVE COOKING MODE
         const modal = document.getElementById('cookingModeModal');
         const startBtn = document.getElementById('btnStartCooking');
         const exitBtn = document.getElementById('btnExitCookingMode');
         const prevBtn = document.getElementById('btnPrevStep');
         const nextBtn = document.getElementById('btnNextStep');
         const completeBtn = document.getElementById('btnMarkComplete');
+        const repeatBtn = document.getElementById('btnRepeatStep');
+        const toggleIngBtn = document.getElementById('btnToggleIngredientsList');
+        const ingDrawer = document.getElementById('cookingModalIngDrawer');
         const counterEl = document.getElementById('cookingStepCounter');
         const percentEl = document.getElementById('cookingStepPercent');
         const progressBar = document.getElementById('cookingProgressBar');
         const badgeEl = document.getElementById('modalStepNumberBadge');
         const textEl = document.getElementById('modalStepInstructionText');
         const celebEl = document.getElementById('completionCelebration');
+        const celebMasterBtn = document.getElementById('btnCelebrationMarkMastered');
+
+        // Check if there is a saved cooking step for this recipe
+        const savedCookingStepKey = 'amma_cook_step_' + recipeId;
+        const savedCookingStep = window.AmmaStorage ? parseInt(window.AmmaStorage.get(savedCookingStepKey, '0'), 10) : 0;
+        if (!isNaN(savedCookingStep) && savedCookingStep > 0 && savedCookingStep < stepsData.length) {
+            currentStepIndex = savedCookingStep;
+        }
 
         function renderCookingStep(index) {
+            if (index < 0 || index >= stepsData.length) return;
             currentStepIndex = index;
             const total = stepsData.length;
             const currentStepNum = index + 1;
@@ -784,10 +920,15 @@ include __DIR__ . '/includes/header.php';
                 completeBtn.style.display = 'none';
             }
             celebEl.style.display = 'none';
+
+            // Save active step in localStorage so user can resume on reload
+            if (window.AmmaStorage) {
+                window.AmmaStorage.set(savedCookingStepKey, index);
+            }
         }
 
         startBtn.addEventListener('click', function() {
-            renderCookingStep(0);
+            renderCookingStep(currentStepIndex);
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
@@ -809,10 +950,48 @@ include __DIR__ . '/includes/header.php';
             }
         });
 
+        // Repeat current step action
+        if (repeatBtn) {
+            repeatBtn.addEventListener('click', function() {
+                renderCookingStep(currentStepIndex);
+                textEl.style.animation = 'none';
+                void textEl.offsetWidth; // trigger reflow
+                textEl.style.animation = 'pulse 0.6s ease';
+            });
+        }
+
+        // Toggle ingredients checklist drawer in cooking mode
+        if (toggleIngBtn && ingDrawer) {
+            toggleIngBtn.addEventListener('click', function() {
+                const isHidden = (ingDrawer.style.display === 'none' || ingDrawer.style.display === '');
+                ingDrawer.style.display = isHidden ? 'block' : 'none';
+                toggleIngBtn.textContent = isHidden ? '✕ Hide Ingredients' : '📋 View Ingredients';
+            });
+        }
+
+        // Complete cooking
         completeBtn.addEventListener('click', function() {
             celebEl.style.display = 'block';
             completeBtn.style.display = 'none';
+            if (window.AmmaStorage) {
+                window.AmmaStorage.set(savedCookingStepKey, 0); // reset step
+
+                // Mark as practiced if not already marked
+                let practiced = window.AmmaStorage.get('amma_practiced_recipes', []);
+                if (!practiced.includes(recipeId)) {
+                    practiced.push(recipeId);
+                    window.AmmaStorage.set('amma_practiced_recipes', practiced);
+                }
+            }
         });
+
+        // Auto trigger cook mode if requested via URL hash or storage trigger
+        if (window.location.hash === '#cookingModeModal' || localStorage.getItem('amma_trigger_cook_mode') === '1') {
+            localStorage.removeItem('amma_trigger_cook_mode');
+            renderCookingStep(currentStepIndex);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
         // 6. IN-KITCHEN COOKING TIMER
         let timerSeconds = 300;
@@ -822,6 +1001,8 @@ include __DIR__ . '/includes/header.php';
         const startTimerBtn = document.getElementById('btnTimerStart');
         const resetTimerBtn = document.getElementById('btnTimerReset');
         const alarmNotice = document.getElementById('timerAlarmNotice');
+        const modalTimerBtn = document.getElementById('btnModalTimerQuick5');
+        const modalTimerDisplay = document.getElementById('modalTimerDisplay');
 
         function formatTimer(s) {
             const m = Math.floor(s / 60);
@@ -830,49 +1011,186 @@ include __DIR__ . '/includes/header.php';
         }
 
         function updateTimerDisplay() {
-            timerDisplay.textContent = formatTimer(timerSeconds);
+            const txt = formatTimer(timerSeconds);
+            if (timerDisplay) timerDisplay.textContent = txt;
+            if (modalTimerDisplay) modalTimerDisplay.textContent = txt;
         }
 
         window.setTimerMinutes = function(mins) {
             clearInterval(timerInterval);
             isRunning = false;
-            startTimerBtn.textContent = 'Start Timer';
-            alarmNotice.style.display = 'none';
+            if (startTimerBtn) startTimerBtn.textContent = 'Start Timer';
+            if (alarmNotice) alarmNotice.style.display = 'none';
             timerSeconds = mins * 60;
             updateTimerDisplay();
         };
 
-        startTimerBtn.addEventListener('click', function() {
-            if (isRunning) {
+        if (startTimerBtn) {
+            startTimerBtn.addEventListener('click', function() {
+                if (isRunning) {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    startTimerBtn.textContent = 'Resume Timer';
+                } else {
+                    if (alarmNotice) alarmNotice.style.display = 'none';
+                    isRunning = true;
+                    startTimerBtn.textContent = 'Pause Timer';
+                    timerInterval = setInterval(function() {
+                        if (timerSeconds > 0) {
+                            timerSeconds--;
+                            updateTimerDisplay();
+                        } else {
+                            clearInterval(timerInterval);
+                            isRunning = false;
+                            startTimerBtn.textContent = 'Start Timer';
+                            if (alarmNotice) alarmNotice.style.display = 'block';
+                        }
+                    }, 1000);
+                }
+            });
+        }
+
+        if (resetTimerBtn) {
+            resetTimerBtn.addEventListener('click', function() {
                 clearInterval(timerInterval);
                 isRunning = false;
-                startTimerBtn.textContent = 'Resume Timer';
-            } else {
-                alarmNotice.style.display = 'none';
-                isRunning = true;
-                startTimerBtn.textContent = 'Pause Timer';
-                timerInterval = setInterval(function() {
-                    if (timerSeconds > 0) {
-                        timerSeconds--;
-                        updateTimerDisplay();
-                    } else {
-                        clearInterval(timerInterval);
-                        isRunning = false;
-                        startTimerBtn.textContent = 'Start Timer';
-                        alarmNotice.style.display = 'block';
-                    }
-                }, 1000);
+                if (startTimerBtn) startTimerBtn.textContent = 'Start Timer';
+                if (alarmNotice) alarmNotice.style.display = 'none';
+                timerSeconds = 300;
+                updateTimerDisplay();
+            });
+        }
+
+        if (modalTimerBtn) {
+            modalTimerBtn.addEventListener('click', function() {
+                if (!isRunning) {
+                    timerSeconds = 300;
+                    isRunning = true;
+                    modalTimerBtn.style.background = 'var(--primary)';
+                    modalTimerBtn.style.color = '#FFF';
+                    timerInterval = setInterval(function() {
+                        if (timerSeconds > 0) {
+                            timerSeconds--;
+                            updateTimerDisplay();
+                        } else {
+                            clearInterval(timerInterval);
+                            isRunning = false;
+                            modalTimerBtn.style.background = '#ECFDF5';
+                            modalTimerBtn.style.color = '#047857';
+                            if (modalTimerDisplay) modalTimerDisplay.textContent = "DONE! 🔔";
+                        }
+                    }, 1000);
+                } else {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    modalTimerBtn.style.background = '';
+                    modalTimerBtn.style.color = '';
+                }
+            });
+        }
+
+        // 7. RECIPE MASTERY CHECKLIST & USER CONTROL (Requirement 14)
+        const masteryStorageKey = 'amma_mastery_' + recipeId;
+        const statusFeedbackEl = document.getElementById('masteryStatusFeedback');
+        const masteryButtons = document.querySelectorAll('.mastery-status-btn');
+        const masteryCheckboxes = document.querySelectorAll('.mastery-chk');
+
+        function loadMasteryState() {
+            if (!window.AmmaStorage) return;
+
+            // Load saved checklist array (booleans)
+            const savedChecks = window.AmmaStorage.get(masteryStorageKey + '_checks', [false, false, false, false, false, false]);
+            masteryCheckboxes.forEach(function(chk, idx) {
+                chk.checked = !!savedChecks[idx];
+            });
+
+            // Load saved status string ('Learning', 'Practiced', 'Mastered', or null)
+            const savedStatus = window.AmmaStorage.get(masteryStorageKey + '_status', null);
+            updateMasteryStatusUI(savedStatus);
+        }
+
+        function updateMasteryStatusUI(status) {
+            masteryButtons.forEach(function(btn) {
+                const btnStatus = btn.getAttribute('data-status');
+                if (btnStatus === status) {
+                    btn.style.boxShadow = '0 0 0 3px rgba(194, 65, 12, 0.35)';
+                    btn.style.fontWeight = '800';
+                    btn.style.transform = 'scale(1.05)';
+                } else {
+                    btn.style.boxShadow = 'none';
+                    btn.style.fontWeight = '600';
+                    btn.style.transform = 'none';
+                }
+            });
+
+            if (statusFeedbackEl) {
+                if (status === 'Mastered') {
+                    statusFeedbackEl.innerHTML = '<span style="color: #15803D;">👑 Recipe Status: Mastered! Saved in your culinary achievements.</span>';
+                } else if (status === 'Practiced') {
+                    statusFeedbackEl.innerHTML = '<span style="color: #1D4ED8;">🍳 Recipe Status: Practiced! Continue cooking to reach Master status.</span>';
+                } else if (status === 'Learning') {
+                    statusFeedbackEl.innerHTML = '<span style="color: #B45309;">🌱 Recipe Status: Currently Learning! Review steps and ingredients.</span>';
+                } else {
+                    statusFeedbackEl.textContent = 'Current Status: Not yet marked. Choose a level above when ready.';
+                }
             }
+
+            // Sync with global mastered recipes list for academy dashboard calculation
+            if (window.AmmaStorage) {
+                let masteredList = window.AmmaStorage.get('amma_mastered_recipes', []);
+                const idx = masteredList.indexOf(recipeId);
+                if (status === 'Mastered') {
+                    if (idx === -1) masteredList.push(recipeId);
+                } else {
+                    if (idx > -1) masteredList.splice(idx, 1);
+                }
+                window.AmmaStorage.set('amma_mastered_recipes', masteredList);
+            }
+        }
+
+        // Attach listener to status buttons
+        masteryButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const newStatus = this.getAttribute('data-status');
+                if (!window.AmmaStorage) return;
+                window.AmmaStorage.set(masteryStorageKey + '_status', newStatus);
+                updateMasteryStatusUI(newStatus);
+            });
         });
 
-        resetTimerBtn.addEventListener('click', function() {
-            clearInterval(timerInterval);
-            isRunning = false;
-            startTimerBtn.textContent = 'Start Timer';
-            alarmNotice.style.display = 'none';
-            timerSeconds = 300;
-            updateTimerDisplay();
+        // Attach listener to checklist checkboxes
+        masteryCheckboxes.forEach(function(chk) {
+            chk.addEventListener('change', function() {
+                if (!window.AmmaStorage) return;
+                const state = [];
+                masteryCheckboxes.forEach(function(c) { state.push(c.checked); });
+                window.AmmaStorage.set(masteryStorageKey + '_checks', state);
+
+                // If user checked all 6, suggest marking as Mastered
+                const allChecked = state.every(function(v) { return v === true; });
+                if (allChecked) {
+                    const curr = window.AmmaStorage.get(masteryStorageKey + '_status', null);
+                    if (curr !== 'Mastered') {
+                        window.AmmaStorage.set(masteryStorageKey + '_status', 'Mastered');
+                        updateMasteryStatusUI('Mastered');
+                    }
+                }
+            });
         });
+
+        if (celebMasterBtn) {
+            celebMasterBtn.addEventListener('click', function() {
+                if (window.AmmaStorage) {
+                    window.AmmaStorage.set(masteryStorageKey + '_status', 'Mastered');
+                    masteryCheckboxes.forEach(function(c) { c.checked = true; });
+                    window.AmmaStorage.set(masteryStorageKey + '_checks', [true, true, true, true, true, true]);
+                    updateMasteryStatusUI('Mastered');
+                }
+                celebMasterBtn.textContent = '✓ Saved as Mastered!';
+            });
+        }
+
+        loadMasteryState();
     });
 </script>
 

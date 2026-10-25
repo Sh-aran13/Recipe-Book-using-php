@@ -329,3 +329,51 @@ function get_related_recipes(array $currentRecipe, int $limit = 3): array {
 
     return $related;
 }
+
+/**
+ * Get related Academy lessons for a given recipe
+ */
+function get_related_lessons_for_recipe(array $recipe): array {
+    $matched = [];
+    $recipeId = $recipe['id'] ?? '';
+    $explicitLessons = $recipe['related_lessons'] ?? [];
+
+    if (function_exists('get_academy_lessons')) {
+        $allLessons = get_academy_lessons();
+
+        // 1. Check explicit lesson IDs in recipe
+        foreach ($explicitLessons as $lId) {
+            if (isset($allLessons[$lId]) && !isset($matched[$lId])) {
+                $matched[$lId] = $allLessons[$lId];
+            }
+        }
+
+        // 2. Check reverse mapping in lessons
+        foreach ($allLessons as $lId => $lesson) {
+            $relatedR = $lesson['related_recipes'] ?? [];
+            if (in_array($recipeId, $relatedR, true) && !isset($matched[$lId])) {
+                $matched[$lId] = $lesson;
+            }
+        }
+
+        // 3. Category heuristics if still empty
+        if (empty($matched)) {
+            $cat = strtolower($recipe['category'] ?? '');
+            if (str_contains($cat, 'breakfast')) {
+                if (isset($allLessons['int-fermentation'])) $matched['int-fermentation'] = $allLessons['int-fermentation'];
+            } elseif (str_contains($cat, 'curry') || str_contains($cat, 'north')) {
+                if (isset($allLessons['int-onion-tomato-masala'])) $matched['int-onion-tomato-masala'] = $allLessons['int-onion-tomato-masala'];
+                if (isset($allLessons['int-curry-bases'])) $matched['int-curry-bases'] = $allLessons['int-curry-bases'];
+            } elseif (str_contains($cat, 'rice') || str_contains($cat, 'biryani')) {
+                if (isset($allLessons['int-rice-perfection'])) $matched['int-rice-perfection'] = $allLessons['int-rice-perfection'];
+                if (str_contains($cat, 'biryani') && isset($allLessons['adv-dum-science'])) $matched['adv-dum-science'] = $allLessons['adv-dum-science'];
+            } elseif (str_contains($cat, 'dal') || str_contains($cat, 'sambar')) {
+                if (isset($allLessons['int-tempering-mastery'])) $matched['int-tempering-mastery'] = $allLessons['int-tempering-mastery'];
+            } elseif (str_contains($cat, 'sweet') || str_contains($cat, 'dessert')) {
+                if (isset($allLessons['adv-sugar-syrup-science'])) $matched['adv-sugar-syrup-science'] = $allLessons['adv-sugar-syrup-science'];
+            }
+        }
+    }
+
+    return array_values($matched);
+}
