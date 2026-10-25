@@ -13,10 +13,35 @@ if (!isset($current_page)) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#C2410C">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title><?= htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') ?></title>
     <meta name="description" content="Amma's Recipe Book is a loving, easy-to-use digital cooking companion designed for mothers and home cooks. Simple ingredients, clear steps, and delicious authentic Indian homemade food.">
     
+    <!-- Early Client Storage Helper -->
+    <script>
+        (function() {
+            window.AmmaStorage = window.AmmaStorage || {
+                get: function(key, defaultVal) {
+                    try {
+                        const val = localStorage.getItem(key);
+                        return val ? JSON.parse(val) : defaultVal;
+                    } catch (e) {
+                        return defaultVal;
+                    }
+                },
+                set: function(key, val) {
+                    try {
+                        localStorage.setItem(key, JSON.stringify(val));
+                    } catch (e) {}
+                }
+            };
+        })();
+    </script>
+
     <!-- Design & Styling System (Embedded for standalone offline execution) -->
     <style>
         /* CSS RESET & CUSTOM PROPERTIES */
@@ -27,14 +52,15 @@ if (!isset($current_page)) {
             --bg-accent-light: #FEF3C7;
             --bg-terracotta-light: #FBEBE6;
             
-            --primary: #C2410C; /* Warm Terracotta */
+            --primary: #C2410C;
             --primary-hover: #9A3412;
             --primary-light: #FFF1EB;
+            --primary-soft: #FEE9D9;
             
-            --saffron: #D97706; /* Saffron gold */
+            --saffron: #D97706;
             --saffron-light: #FEF3C7;
             
-            --herb-green: #15803D; /* Fresh curry leaf green */
+            --herb-green: #15803D;
             --herb-green-light: #DCFCE7;
             
             --earth-brown: #451A03;
@@ -82,7 +108,6 @@ if (!isset($current_page)) {
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ACCESSIBLE FOCUS */
         :focus-visible {
             outline: 3px solid var(--primary);
             outline-offset: 3px;
@@ -104,69 +129,75 @@ if (!isset($current_page)) {
             font: inherit;
         }
 
-        /* CONTAINER */
         .container {
             width: 100%;
-            max-width: 1240px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* TOP BANNER / BRAND BAR */
+        /* ============================================================
+           NEW TOP ANNOUNCEMENT BAR
+           ============================================================ */
         .brand-topbar {
-            background: linear-gradient(90deg, #7C2D12 0%, #9A3412 50%, #C2410C 100%);
+            background: linear-gradient(90deg, #7C2D12 0%, #9A3412 40%, #C2410C 100%);
             color: #FEF3C7;
-            font-size: 13.5px;
-            padding: 6px 0;
+            font-size: 13px;
+            padding: 7px 0;
             text-align: center;
             font-weight: 500;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
         .brand-topbar span {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        /* HEADER & NAVBAR */
+        /* ============================================================
+           NEW HEADER LAYOUT — Clean, Clear, All Links Visible
+           ============================================================ */
         .site-header {
             background-color: var(--bg-surface);
-            border-bottom: 1px solid var(--border-warm);
+            border-bottom: 2px solid var(--border-warm);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(69, 26, 3, 0.04);
+            box-shadow: 0 2px 12px rgba(69, 26, 3, 0.06);
         }
-        .header-inner {
+
+        /* --- ROW 1: Brand Bar (Logo + Search + Favorites) --- */
+        .header-brand-bar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 76px;
             gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-warm);
         }
 
-        /* LOGO */
         .logo-group {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
             flex-shrink: 0;
         }
         .logo-icon-wrap {
-            width: 50px;
-            height: 50px;
+            width: 52px;
+            height: 52px;
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: var(--shadow-sm);
-            background: #FFFBEB;
+            background: linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 100%);
             border: 1px solid #FDE68A;
-            transition: transform 0.3s ease;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .logo-group:hover .logo-icon-wrap {
-            transform: rotate(-5deg) scale(1.05);
+            transform: rotate(-6deg) scale(1.08);
         }
         .logo-icon-wrap img, .logo-icon-wrap svg {
             width: 40px;
@@ -178,472 +209,628 @@ if (!isset($current_page)) {
         }
         .site-title {
             font-family: var(--font-serif);
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
             color: var(--earth-brown);
             line-height: 1.1;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.4px;
         }
         .site-title span {
             color: var(--primary);
         }
         .site-tagline {
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--saffron);
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-top: 2px;
+            letter-spacing: 1.4px;
+            margin-top: 3px;
         }
 
-        /* NAVIGATION LINKS */
-        .main-nav {
+        /* Brand bar right side: search + favorites */
+        .header-brand-actions {
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-        .nav-link {
-            padding: 8px 16px;
-            border-radius: var(--radius-pill);
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 15px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-        }
-        .nav-link:hover {
-            color: var(--primary);
-            background-color: var(--primary-light);
-        }
-        .nav-link.active {
-            color: var(--primary);
-            background-color: var(--primary-light);
-            font-weight: 700;
-        }
-        .fav-count-pill {
-            background-color: var(--primary);
-            color: #FFF;
-            font-size: 11px;
-            padding: 1px 7px;
-            border-radius: var(--radius-pill);
-            font-weight: 700;
+            gap: 12px;
+            flex-shrink: 0;
         }
 
-        /* HEADER SEARCH QUICK BAR */
+        /* Big, clear search box */
         .header-search {
             position: relative;
-            width: 280px;
-            flex-shrink: 1;
+            width: 320px;
         }
         .header-search-input {
             width: 100%;
-            height: 42px;
-            padding: 8px 40px 8px 16px;
+            height: 46px;
+            padding: 10px 48px 10px 18px;
             background-color: var(--bg-warm);
             border: 1.5px solid var(--border-warm);
             border-radius: var(--radius-pill);
-            font-size: 14px;
+            font-size: 14.5px;
             color: var(--text-main);
             transition: var(--transition);
+        }
+        .header-search-input::placeholder {
+            color: var(--text-light);
         }
         .header-search-input:focus {
             background-color: #FFF;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.12);
+            box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.12);
             outline: none;
         }
         .header-search-btn {
             position: absolute;
-            right: 4px;
+            right: 5px;
             top: 50%;
             transform: translateY(-50%);
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            border: none;
-            background: var(--primary);
-            color: #FFF;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        .header-search-btn:hover {
-            background: var(--primary-hover);
-        }
-
-        /* MOBILE MENU TOGGLE */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            padding: 8px;
-            color: var(--earth-brown);
-            cursor: pointer;
-            border-radius: var(--radius-sm);
-        }
-
-        /* MOBILE DRAWER */
-        .mobile-nav-drawer {
-            display: none;
-            background-color: var(--bg-surface);
-            border-bottom: 1px solid var(--border-warm);
-            padding: 16px 20px;
-            flex-direction: column;
-            gap: 12px;
-            box-shadow: var(--shadow-md);
-        }
-        .mobile-nav-drawer.open {
-            display: flex;
-        }
-        .mobile-nav-link {
-            padding: 10px 14px;
-            font-weight: 600;
-            color: var(--text-muted);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .mobile-nav-link.active, .mobile-nav-link:hover {
-            background-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        /* TYPOGRAPHY UTILITIES */
-        .section-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--primary);
-            font-size: 13.5px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
-        .section-heading {
-            font-family: var(--font-serif);
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--earth-brown);
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
-        .section-subheading {
-            color: var(--text-muted);
-            font-size: 16px;
-            margin-top: 6px;
-            max-width: 600px;
-        }
-        .section-header-wrap {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            margin-bottom: 28px;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        /* RECIPE CARDS GRID */
-        .recipes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        /* RECIPE CARD COMPONENT */
-        .recipe-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-warm);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-card);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            position: relative;
-        }
-        .recipe-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: #FDBA74;
-        }
-        .card-image-wrap {
-            position: relative;
-            width: 100%;
-            height: 180px;
-            background-color: var(--bg-warm);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .recipe-card:hover .card-img {
-            transform: scale(1.06);
-        }
-        .card-placeholder-img {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .recipe-icon {
-            font-size: 56px;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-            transition: transform 0.3s ease;
-        }
-        .recipe-card:hover .recipe-icon {
-            transform: scale(1.15) rotate(-4deg);
-        }
-        .cuisine-pill {
-            position: absolute;
-            bottom: 12px;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--earth-brown);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: var(--radius-pill);
-            box-shadow: var(--shadow-sm);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .card-badges {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            display: flex;
-            gap: 6px;
-            z-index: 2;
-        }
-        .diet-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: var(--radius-pill);
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(4px);
-            box-shadow: var(--shadow-sm);
-        }
-        .diet-badge.veg {
-            color: #15803D;
-            border: 1px solid #BBF7D0;
-        }
-        .diet-badge.veg .diet-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #16A34A;
-        }
-        .diet-badge.non-veg {
-            color: #B91C1C;
-            border: 1px solid #FECACA;
-        }
-        .diet-badge.non-veg .diet-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #DC2626;
-        }
-
-        .diff-badge {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: var(--radius-pill);
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: var(--shadow-sm);
-        }
-        .diff-easy { color: #047857; }
-        .diff-medium { color: #B45309; }
-        .diff-hard { color: #B91C1C; }
-
-        .btn-fav-card {
-            position: absolute;
-            top: 10px;
-            right: 10px;
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.92);
             border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9CA3AF;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            z-index: 2;
-        }
-        .btn-fav-card:hover {
-            transform: scale(1.15);
-            color: #EF4444;
-            background: #FFF;
-        }
-        .btn-fav-card.is-fav {
-            color: #EF4444;
-            background: #FFF;
-        }
-        .btn-fav-card.is-fav .heart-icon {
-            fill: #EF4444;
-        }
-
-        .card-body {
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        .card-meta-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 8px;
-        }
-        .card-cat {
-            color: var(--saffron);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 11.5px;
-        }
-        .card-time {
-            display: inline-flex;
-            align-items: center;
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-        .card-title {
-            font-family: var(--font-serif);
-            font-size: 19px;
-            font-weight: 700;
-            color: var(--earth-brown);
-            line-height: 1.3;
-            margin-bottom: 4px;
-        }
-        .card-title a:hover {
-            color: var(--primary);
-        }
-        .card-regional {
-            font-size: 13px;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .card-desc {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 16px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            flex: 1;
-        }
-        .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 12px;
-            border-top: 1px dashed var(--border-warm);
-        }
-        .card-servings {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-        .btn-view-recipe {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--primary);
-            padding: 6px 12px;
-            border-radius: var(--radius-sm);
-            background-color: var(--primary-light);
-            transition: var(--transition);
-        }
-        .btn-view-recipe:hover {
-            background-color: var(--primary);
-            color: #FFF;
-        }
-
-        /* BUTTONS */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 22px;
-            font-size: 15px;
-            font-weight: 600;
-            border-radius: var(--radius-pill);
-            border: 1.5px solid transparent;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        .btn-primary {
             background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
             color: #FFF;
-            box-shadow: 0 4px 12px rgba(194, 65, 12, 0.25);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            box-shadow: 0 2px 6px rgba(194, 65, 12, 0.3);
         }
-        .btn-primary:hover {
+        .header-search-btn:hover {
             background: linear-gradient(135deg, #C2410C 0%, #9A3412 100%);
-            box-shadow: 0 6px 16px rgba(194, 65, 12, 0.35);
-            transform: translateY(-2px);
-            color: #FFF;
-        }
-        .btn-secondary {
-            background: var(--bg-surface);
-            color: var(--earth-brown);
-            border-color: var(--border-color);
-        }
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: var(--primary-light);
+            transform: translateY(-50%) scale(1.08);
         }
 
-        /* ACCESSIBILITY & RESPONSIVE BREAKPOINTS */
-        @media (max-width: 900px) {
-            .header-search { display: none; }
-            .main-nav { display: none; }
-            .mobile-menu-btn { display: block; }
-            .section-heading { font-size: 26px; }
+        /* Favorites icon button */
+        .fav-quick-btn {
+            position: relative;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--bg-warm);
+            border: 1.5px solid var(--border-warm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #DC2626;
+            font-size: 20px;
+            transition: var(--transition);
+            text-decoration: none;
+            flex-shrink: 0;
         }
+        .fav-quick-btn:hover {
+            background: #FEE2E2;
+            border-color: #FCA5A5;
+            transform: scale(1.08);
+        }
+        .fav-count-pill {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            color: #FFF;
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: var(--radius-pill);
+            font-weight: 800;
+            box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);
+            letter-spacing: 0.3px;
+        }
+
+        /* Sidebar toggle button (now in brand bar) */
+        .sidebar-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            border: 1.5px solid #FDE68A;
+            padding: 10px 16px;
+            color: var(--earth-brown);
+            cursor: pointer;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 2px 6px rgba(217, 119, 6, 0.12);
+            flex-shrink: 0;
+        }
+        .sidebar-toggle-btn:hover {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FCD34D 100%);
+            color: #7C2D12;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.22);
+        }
+        .sidebar-toggle-btn svg {
+            flex-shrink: 0;
+            color: var(--primary);
+        }
+
+        /* ============================================================
+           ROW 2: PRIMARY NAVIGATION — All Links Fully Visible
+           ============================================================ */
+        .header-primary-nav {
+            background: linear-gradient(180deg, #FFFDF9 0%, #FFF8EE 100%);
+            border-top: 1px solid var(--border-warm);
+        }
+        .header-primary-nav-inner {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 4px;
+            padding: 6px 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .header-primary-nav-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .primary-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 14.5px;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            white-space: nowrap;
+            position: relative;
+            border: 1.5px solid transparent;
+        }
+        .primary-nav-link .nav-emoji {
+            font-size: 18px;
+            line-height: 1;
+            transition: transform 0.25s ease;
+        }
+        .primary-nav-link:hover {
+            color: var(--primary);
+            background: #FFFFFF;
+            border-color: #FDE68A;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(194, 65, 12, 0.1);
+        }
+        .primary-nav-link:hover .nav-emoji {
+            transform: scale(1.15);
+        }
+        .primary-nav-link.active {
+            color: #FFFFFF;
+            background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+            border-color: #C2410C;
+            box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
+        }
+        .primary-nav-link.active .nav-emoji {
+            transform: scale(1.1);
+        }
+
+        /* Special accent styles for Rescue & Academy */
+        .primary-nav-link--rescue {
+            color: #991B1B;
+        }
+        .primary-nav-link--rescue .nav-emoji {
+            filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.4));
+        }
+        .primary-nav-link--rescue:hover {
+            background: #FEE2E2;
+            border-color: #FECACA;
+            color: #7F1D1D;
+        }
+        .primary-nav-link--rescue.active {
+            background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%) !important;
+            border-color: #991B1B;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+        }
+
+        .primary-nav-link--academy {
+            color: #92400E;
+        }
+        .primary-nav-link--academy:hover {
+            background: #FEF3C7;
+            border-color: #FDE68A;
+        }
+        .primary-nav-link--academy.active {
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+            border-color: #B45309;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+        }
+
+        /* Small badge on nav links */
+        .nav-count-badge {
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: var(--radius-pill);
+            background: rgba(194, 65, 12, 0.12);
+            color: var(--primary);
+            margin-left: 2px;
+        }
+        .primary-nav-link.active .nav-count-badge {
+            background: rgba(255, 255, 255, 0.28);
+            color: #FFFFFF;
+        }
+        .primary-nav-link--rescue .nav-count-badge {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+        .primary-nav-link--rescue.active .nav-count-badge {
+            background: rgba(255, 255, 255, 0.28);
+            color: #FFFFFF;
+        }
+
+        /* ============================================================
+           SIDEBAR OVERLAY & APP SIDEBAR (unchanged functionality)
+           ============================================================ */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(41, 37, 36, 0.65);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .app-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 320px;
+            max-width: 88vw;
+            height: 100vh;
+            background: #FFFFFF;
+            z-index: 1000;
+            box-shadow: 6px 0 30px rgba(41, 37, 36, 0.25);
+            transform: translateX(-100%);
+            transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .app-sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 22px 20px 18px;
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            border-bottom: 1.5px solid #FDE68A;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .sidebar-brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #FFFFFF;
+            border: 1px solid #FDE68A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .sidebar-brand-title {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--earth-brown);
+            line-height: 1.1;
+        }
+        .sidebar-brand-sub {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .sidebar-close-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(120, 53, 15, 0.2);
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--earth-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .sidebar-close-btn:hover {
+            background: #EF4444;
+            color: #FFFFFF;
+            border-color: #EF4444;
+            transform: rotate(90deg);
+        }
+
+        .sidebar-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 18px 16px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: #FED7AA transparent;
+        }
+        .sidebar-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebar-body::-webkit-scrollbar-thumb {
+            background: #FED7AA;
+            border-radius: 10px;
+        }
+
+        .sidebar-section-title {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            padding: 0 10px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-nav-item a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 14px;
+            border-radius: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 14.5px;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        .sidebar-nav-item a:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+        .sidebar-nav-item a.active {
+            background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+            color: #FFFFFF;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(194, 65, 12, 0.28);
+        }
+        .sidebar-nav-item a.active:hover {
+            color: #FFFFFF;
+            transform: none;
+        }
+        .sidebar-icon {
+            font-size: 19px;
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .sidebar-badge {
+            margin-left: auto;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+        }
+        .sidebar-badge-academy {
+            background: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FDE68A;
+        }
+        .sidebar-badge-rescue {
+            background: #FEE2E2;
+            color: #991B1B;
+            border: 1px solid #FECACA;
+        }
+        .sidebar-nav-item a.active .sidebar-badge {
+            background: rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .sidebar-feature-card {
+            background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+            border: 1.5px solid #FECDD3;
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .sidebar-feature-card h4 {
+            font-family: var(--font-serif);
+            font-size: 15px;
+            font-weight: 800;
+            color: #9F1239;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+        }
+        .sidebar-feature-card p {
+            font-size: 12px;
+            line-height: 1.45;
+            color: #881337;
+            margin: 0;
+        }
+        .sidebar-feature-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 7px 12px;
+            background: #E11D48;
+            color: #FFF !important;
+            font-weight: 700;
+            font-size: 12px;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: var(--transition);
+            margin-top: 4px;
+        }
+        .sidebar-feature-btn:hover {
+            background: #BE123C;
+            transform: translateY(-1px);
+        }
+
+        /* ============================================================
+           RESPONSIVE BREAKPOINTS
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .header-search {
+                width: 240px;
+            }
+            .primary-nav-link {
+                padding: 11px 14px;
+                font-size: 13.5px;
+            }
+            .primary-nav-link .nav-emoji {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .header-brand-bar {
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+            .header-brand-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .header-search {
+                flex: 1;
+                width: auto;
+            }
+            .header-primary-nav-inner {
+                justify-content: flex-start;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            .site-title {
+                font-size: 20px;
+            }
+            .site-tagline {
+                font-size: 10px;
+            }
+        }
+
+        /* ANDROID & MOBILE OPTIMIZATIONS (<= 768px) */
+        @media (max-width: 768px) {
+            body {
+                /* Padding bottom so content is never hidden behind Android bottom navigation bar */
+                padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+                -webkit-tap-highlight-color: rgba(194, 65, 12, 0.1);
+            }
+            input, select, textarea {
+                /* Prevents automatic zoom on mobile devices */
+                font-size: 16px !important;
+            }
+
+            /* HIDE TOP NAV LINKS & SIDEBAR ON MOBILE (as bottom nav links are present) */
+            .header-primary-nav {
+                display: none !important;
+            }
+            .sidebar-toggle-btn {
+                display: none !important;
+            }
+            .app-sidebar,
+            .sidebar-overlay {
+                display: none !important;
+            }
+
+            /* Clean mobile brand bar */
+            .header-brand-bar {
+                padding: 10px 0;
+            }
+            .header-brand-actions {
+                gap: 8px;
+            }
+        }
+
         @media (max-width: 600px) {
-            .container { padding: 0 16px; }
-            .recipes-grid { grid-template-columns: 1fr; }
-            .section-header-wrap { flex-direction: column; align-items: flex-start; }
-            .site-title { font-size: 19px; }
+            .container {
+                padding: 0 14px;
+            }
+            .brand-topbar {
+                font-size: 11.5px;
+                padding: 5px 8px;
+                line-height: 1.35;
+            }
+            .header-brand-bar {
+                padding: 8px 0;
+                gap: 10px;
+            }
+            .logo-icon-wrap {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+            }
+            .logo-icon-wrap img, .logo-icon-wrap svg {
+                width: 28px;
+                height: 28px;
+            }
+            .site-title {
+                font-size: 17px;
+            }
+            .site-tagline {
+                font-size: 9.5px;
+                letter-spacing: 0.8px;
+            }
+            .header-search {
+                width: 100%;
+            }
+            .header-search-input {
+                height: 40px;
+                font-size: 14px !important;
+                padding: 6px 42px 6px 14px;
+            }
+            .header-search-btn {
+                width: 32px;
+                height: 32px;
+            }
+            .fav-quick-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
         }
 
         /* PRINT STYLES */
         @media print {
-            .brand-topbar, .site-header, .mobile-nav-drawer, .site-footer, .no-print {
+            .brand-topbar, .site-header, .app-sidebar, .sidebar-overlay, .no-print {
                 display: none !important;
             }
             body {
@@ -662,85 +849,236 @@ if (!isset($current_page)) {
         </div>
     </div>
 
-    <!-- SITE HEADER -->
+    <!-- ============================================================
+         SITE HEADER — NEW TWO-ROW LAYOUT
+         Row 1: Brand + Search + Favorites + Menu Button
+         Row 2: Full-Width Primary Navigation
+         ============================================================ -->
     <header class="site-header" role="banner">
-        <div class="container header-inner">
-            <!-- LOGO -->
-            <a href="index.php" class="logo-group" aria-label="Amma's Recipe Book - Home">
-                <div class="logo-icon-wrap">
-                    <img src="assets/images/logo/amma-logo.svg" alt="Cooking Pot Logo" width="40" height="40">
+
+        <!-- ROW 1: BRAND BAR -->
+        <div class="header-brand-bar">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+                <!-- LEFT: Menu button + Logo -->
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <button type="button" class="sidebar-toggle-btn" id="sidebarOpenBtn" aria-label="Open Navigation Sidebar" aria-haspopup="true" title="Open Full Menu Sidebar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <span>Menu</span>
+                    </button>
+
+                    <a href="index.php" class="logo-group" aria-label="Amma's Recipe Book - Home">
+                        <div class="logo-icon-wrap">
+                            <img src="assets/images/logo/amma-logo.svg" alt="Cooking Pot Logo" width="40" height="40">
+                        </div>
+                        <div class="logo-text-wrap">
+                            <div class="site-title">Amma's <span>Recipe Book</span></div>
+                            <div class="site-tagline">Master Chef Academy</div>
+                        </div>
+                    </a>
                 </div>
-                <div class="logo-text-wrap">
-                    <div class="site-title">Amma's <span>Recipe Book</span></div>
-                    <div class="site-tagline">Master Chef Academy</div>
+
+                <!-- RIGHT: Search + Favorites -->
+                <div class="header-brand-actions">
+                    <form action="recipes.php" method="GET" class="header-search" role="search">
+                        <input type="text" name="q" class="header-search-input" placeholder="Search recipes, ingredients..." aria-label="Search recipes">
+                        <button type="submit" class="header-search-btn" aria-label="Submit Search">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <a href="favorites.php" class="fav-quick-btn" title="Saved Favorites" aria-label="Saved Favorites">
+                        ❤️
+                        <span class="fav-count-pill" id="headerFavBadge" style="display:none;">0</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ROW 2: PRIMARY NAVIGATION — ALL LINKS FULLY VISIBLE -->
+        <nav class="header-primary-nav" role="navigation" aria-label="Primary Navigation">
+            <div class="container">
+                <div class="header-primary-nav-inner">
+                    <a href="index.php" class="primary-nav-link <?= ($current_page ?? '') === 'home' ? 'active' : '' ?>">
+                        <span class="nav-emoji">🏠</span>
+                        <span>Home</span>
+                    </a>
+                    <a href="academy.php" class="primary-nav-link primary-nav-link--academy <?= ($current_page ?? '') === 'academy' ? 'active' : '' ?>">
+                        <span class="nav-emoji">🎓</span>
+                        <span>Academy</span>
+                    </a>
+                    <a href="recipe-rescue.php" class="primary-nav-link primary-nav-link--rescue <?= ($current_page ?? '') === 'recipe_rescue' ? 'active' : '' ?>">
+                        <span class="nav-emoji">🛟</span>
+                        <span>Recipe Rescue</span>
+                    </a>
+                    <a href="what-can-i-cook.php" class="primary-nav-link <?= ($current_page ?? '') === 'what_can_i_cook' ? 'active' : '' ?>">
+                        <span class="nav-emoji">🥕</span>
+                        <span>Pantry</span>
+                    </a>
+                    <a href="recipes.php" class="primary-nav-link <?= ($current_page ?? '') === 'recipes' ? 'active' : '' ?>">
+                        <span class="nav-emoji">📖</span>
+                        <span>Recipes</span>
+                        <span class="nav-count-badge">75</span>
+                    </a>
+                    <a href="categories.php" class="primary-nav-link <?= ($current_page ?? '') === 'categories' ? 'active' : '' ?>">
+                        <span class="nav-emoji">📂</span>
+                        <span>Categories</span>
+                    </a>
+                    <a href="knowledge-centre.php" class="primary-nav-link <?= ($current_page ?? '') === 'knowledge_centre' ? 'active' : '' ?>">
+                        <span class="nav-emoji">💡</span>
+                        <span>Science</span>
+                    </a>
+                    <a href="challenges.php" class="primary-nav-link <?= ($current_page ?? '') === 'challenges' ? 'active' : '' ?>">
+                        <span class="nav-emoji">🏆</span>
+                        <span>Challenges</span>
+                    </a>
+                    <a href="progress.php" class="primary-nav-link <?= ($current_page ?? '') === 'progress' ? 'active' : '' ?>">
+                        <span class="nav-emoji">📊</span>
+                        <span>Progress</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- MODERN APP SIDEBAR (unchanged functionality) -->
+    <aside class="app-sidebar" id="appSidebar" role="navigation" aria-label="Site Sidebar Navigation">
+        <div class="sidebar-header">
+            <a href="index.php" class="sidebar-brand">
+                <div class="sidebar-brand-icon">
+                    <img src="assets/images/logo/amma-logo.svg" alt="Amma Logo" width="32" height="32">
+                </div>
+                <div>
+                    <div class="sidebar-brand-title">Amma's Kitchen</div>
+                    <div class="sidebar-brand-sub">Master Chef Academy</div>
                 </div>
             </a>
-
-            <!-- DESKTOP NAVIGATION -->
-            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
-                <a href="index.php" class="nav-link <?= $current_page === 'home' ? 'active' : '' ?>">Home</a>
-                <a href="academy.php" class="nav-link <?= $current_page === 'academy' ? 'active' : '' ?>" style="<?= $current_page === 'academy' ? 'color: #C2410C; font-weight: 700;' : '' ?>">
-                    <span>🎓 Academy</span>
-                </a>
-                <a href="what-can-i-cook.php" class="nav-link <?= $current_page === 'what_can_i_cook' ? 'active' : '' ?>">
-                    <span>🥕 Pantry</span>
-                </a>
-                <a href="recipes.php" class="nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">Recipes (75)</a>
-                <a href="knowledge-centre.php" class="nav-link <?= $current_page === 'knowledge_centre' ? 'active' : '' ?>" title="Cooking Science, Ingredients & Troubleshooting">
-                    <span>💡 Science & Tips</span>
-                </a>
-                <a href="quiz.php" class="nav-link <?= $current_page === 'quiz' ? 'active' : '' ?>" title="Cooking Knowledge Quiz">
-                    <span>❓ Quiz</span>
-                </a>
-                <a href="progress.php" class="nav-link <?= $current_page === 'progress' ? 'active' : '' ?>" title="My Learning Progress & Cookbook">
-                    <span>📊 Progress</span>
-                </a>
-                <a href="favorites.php" class="nav-link <?= $current_page === 'favorites' ? 'active' : '' ?>">
-                    <span>❤️</span>
-                    <span class="fav-count-pill" id="headerFavBadge" style="display:none;">0</span>
-                </a>
-            </nav>
-
-            <!-- HEADER SEARCH -->
-            <form action="recipes.php" method="GET" class="header-search" role="search">
-                <label for="headerSearchInput" class="visually-hidden" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Search recipes</label>
-                <input type="text" id="headerSearchInput" name="q" class="header-search-input" placeholder="Search dish, dal, spices..." aria-label="Search recipes">
-                <button type="submit" class="header-search-btn" aria-label="Submit search">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </form>
-
-            <!-- MOBILE MENU BUTTON -->
-            <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
+            <button type="button" class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close Navigation Sidebar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
         </div>
 
-        <!-- MOBILE DRAWER -->
-        <div class="mobile-nav-drawer" id="mobileDrawer" role="region" aria-label="Mobile Navigation">
-            <form action="recipes.php" method="GET" style="margin-bottom: 8px;">
-                <input type="text" name="q" class="header-search-input" placeholder="Search recipes or ingredients..." style="width: 100%; border-radius: var(--radius-md);">
-            </form>
-            <a href="index.php" class="mobile-nav-link <?= $current_page === 'home' ? 'active' : '' ?>">🏠 Home</a>
-            <a href="academy.php" class="mobile-nav-link <?= $current_page === 'academy' ? 'active' : '' ?>" style="font-weight: 700; color: var(--primary);">🎓 Master Chef Academy</a>
-            <a href="what-can-i-cook.php" class="mobile-nav-link <?= $current_page === 'what_can_i_cook' ? 'active' : '' ?>">🥕 What Can I Cook? (Pantry Finder)</a>
-            <a href="knowledge-centre.php" class="mobile-nav-link <?= $current_page === 'knowledge_centre' ? 'active' : '' ?>">💡 Cooking Knowledge Centre</a>
-            <a href="quiz.php" class="mobile-nav-link <?= $current_page === 'quiz' ? 'active' : '' ?>">❓ Cooking Quiz</a>
-            <a href="progress.php" class="mobile-nav-link <?= $current_page === 'progress' ? 'active' : '' ?>">📊 My Learning Progress</a>
-            <a href="recipes.php" class="mobile-nav-link <?= $current_page === 'recipes' ? 'active' : '' ?>">📖 All Recipes (75)</a>
-            <a href="categories.php" class="mobile-nav-link <?= $current_page === 'categories' ? 'active' : '' ?>">📂 Categories</a>
-            <a href="favorites.php" class="mobile-nav-link <?= $current_page === 'favorites' ? 'active' : '' ?>">
-                <span>❤️ My Saved Favorites</span>
-                <span class="fav-count-pill" id="mobileFavBadge" style="display:none;">0</span>
-            </a>
+        <div class="sidebar-body">
+            <div class="sidebar-feature-card">
+                <h4><span>🛟</span> Recipe Rescue Assistant</h4>
+                <p>Curry too salty? Rice mushy? Chapati hard? Get instant recovery steps & kitchen science.</p>
+                <a href="recipe-rescue.php" class="sidebar-feature-btn">
+                    <span>⚡</span> Fix My Cooking Mistake
+                </a>
+            </div>
+
+            <div>
+                <div class="sidebar-section-title">Main Navigation</div>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="index.php" class="<?= $current_page === 'home' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">🏠</span>
+                            <span>Home Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="academy.php" class="<?= $current_page === 'academy' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">🎓</span>
+                            <span>Master Chef Academy</span>
+                            <span class="sidebar-badge sidebar-badge-academy">Learn</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="recipe-rescue.php" class="<?= $current_page === 'recipe_rescue' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">🛟</span>
+                            <span style="font-weight: 700;">Recipe Rescue Assistant</span>
+                            <span class="sidebar-badge sidebar-badge-rescue">New</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="what-can-i-cook.php" class="<?= $current_page === 'what_can_i_cook' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">🥕</span>
+                            <span>What Can I Cook? (Pantry)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="sidebar-section-title">Recipes & Cooking</div>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="recipes.php" class="<?= $current_page === 'recipes' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">📖</span>
+                            <span>All Recipes</span>
+                            <span class="sidebar-badge" style="background:#E2E8F0; color:#475569;">75</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="categories.php" class="<?= $current_page === 'categories' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">📂</span>
+                            <span>Recipe Categories</span>
+                            <span class="sidebar-badge" style="background:#E2E8F0; color:#475569;">15</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="favorites.php" class="<?= $current_page === 'favorites' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">❤️</span>
+                            <span>Saved Favorites</span>
+                            <span class="sidebar-badge" id="sidebarFavBadge" style="background:#FEE2E2; color:#DC2626; display:none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="sidebar-section-title">Knowledge & Learning</div>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="knowledge-centre.php" class="<?= $current_page === 'knowledge_centre' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">💡</span>
+                            <span>Cooking Knowledge Centre</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="challenges.php" class="<?= $current_page === 'challenges' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">🏆</span>
+                            <span>Weekly Challenges</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="quiz.php" class="<?= $current_page === 'quiz' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">❓</span>
+                            <span>Culinary Quiz</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="progress.php" class="<?= $current_page === 'progress' ? 'active' : '' ?>">
+                            <span class="sidebar-icon">📊</span>
+                            <span>My Progress & Cookbook</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="padding: 10px; background: #F8FAFC; border-radius: 12px; border: 1px solid #E2E8F0;">
+                <form action="recipes.php" method="GET">
+                    <label for="sidebarSearchInput" style="display:block; font-size: 11px; font-weight: 700; color: #64748B; margin-bottom: 6px; text-transform: uppercase;">Quick Search</label>
+                    <div style="position: relative;">
+                        <input type="text" id="sidebarSearchInput" name="q" placeholder="Type a recipe or ingredient..." style="width: 100%; height: 38px; border-radius: 8px; border: 1px solid #CBD5E1; padding: 6px 12px; font-size: 13px;">
+                    </div>
+                </form>
+            </div>
         </div>
-    </header>
+    </aside>
 
     <main id="mainContent" style="flex: 1;">

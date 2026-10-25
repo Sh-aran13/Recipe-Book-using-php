@@ -1,0 +1,362 @@
+===============================================================================
+                 AMMA'S RECIPE BOOK — MASTER CHEF ACADEMY
+                         COMPLETE RECIPE DIRECTORY
+                  Total: 75 Authentic Recipes in 14 Categories
+===============================================================================
+
+===============================================================================
+ ANDHRA SPECIALITIES (3 recipes)
+===============================================================================
+ 1. Andhra MLA Pesarattu (పెసరట్టు (Pesarattu))
+    Category: Andhra Specialities | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: andhra-pesarattu
+    Description: Nutritious whole green gram (moong) crepes spiced with ginger and green chillies, topped with finely chopped onions and served with upma.
+
+ 2. Andhra Gutti Vankaya Koora (Stuffed Brinjal) (గుత్తి వంకాయ కూర (Gutti Vankaya))
+    Category: Andhra Specialities | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: gutti-vankaya-curry
+    Description: Tender small purple brinjals stuffed with a richly roasted peanut, sesame, coconut, and spice masala, slow-cooked in a tangy tamarind gravy.
+
+ 3. Authentic Andhra Gongura Chicken (గోంగూర చికెన్ (Gongura Chicken))
+    Category: Andhra Specialities | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 50 mins | ID: gongura-chicken
+    Description: The crown jewel of Telugu cuisine: succulent chicken cooked in a tangy, sour sorrel leaf (Gongura) paste with caramelized onions, roasted garlic, and fiery Guntur chillies.
+
+
+===============================================================================
+ CHUTNEYS AND PICKLES (4 recipes)
+===============================================================================
+ 4. Hotel Style White Coconut Chutney (కొబ్బరి చట్నీ (Kobbari Chutney))
+    Category: Chutneys and Pickles | Diet: [Veg] | Difficulty: [Easy] | Total Time: 13 mins | ID: hotel-coconut-chutney
+    Description: Creamy, silky fresh coconut ground with roasted gram, ginger, green chillies, and finished with a fragrant mustard-curry leaf tadka.
+
+ 5. Andhra Palli Chutney (Peanut Chutney) (పల్లి చట్నీ (Palli Pachadi))
+    Category: Chutneys and Pickles | Diet: [Veg] | Difficulty: [Easy] | Total Time: 15 mins | ID: andhra-peanut-chutney
+    Description: Rich, nutty, and mildly tangy Andhra breakfast chutney made with roasted peanuts, sautéed green chillies, garlic, and tamarind.
+
+ 6. Spicy Andhra Tomato Chutney (Tomato Pachadi) (టమాటా పచ్చడి (Tomato Pachadi))
+    Category: Chutneys and Pickles | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: andhra-tomato-chutney
+    Description: A fiery and tangy rustic chutney made with ripe tomatoes, roasted red chillies, coriander seeds, garlic, and tamarind.
+
+ 7. Royal Andhra Gongura Pachadi (గోంగూర పచ్చడి (Gongura Pickle))
+    Category: Chutneys and Pickles | Diet: [Veg] | Difficulty: [Medium] | Total Time: 30 mins | ID: andhra-gongura-pachadi
+    Description: The crown jewel of Andhra cuisine—tangy sorrel (gongura) leaves slow-cooked with roasted spices, garlic, and fiery red chillies.
+
+
+===============================================================================
+ DAL AND SAMBAR (5 recipes)
+===============================================================================
+ 8. Andhra Style Tomato Pappu (టమాటా పప్పు (Tomato Dal))
+    Category: Dal and Sambar | Diet: [Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: andhra-tomato-pappu
+    Description: The ultimate Andhra comfort food—toor dal cooked soft with juicy country tomatoes, tempered with crushed garlic, mustard, cumin, and ghee.
+
+ 9. Andhra Spinach Dal (Palakura Pappu) (పాలకూర పప్పు (Palakura Pappu))
+    Category: Dal and Sambar | Diet: [Veg] | Difficulty: [Easy] | Total Time: 40 mins | ID: andhra-palakura-pappu
+    Description: Nutritious fresh spinach leaves cooked together with yellow lentils, tangy tamarind, green chillies, and aromatic garlic tempering.
+
+10. Authentic Hotel Style Drumstick Sambar (సాంబారు (Munakkaya Sambar))
+    Category: Dal and Sambar | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: hotel-style-sambar
+    Description: A hearty and tangy lentil stew loaded with drumsticks, shallots, carrots, tomatoes, and freshly roasted homemade sambar powder.
+
+11. Simple Everyday Comfort Dal (Jeera Garlic Tadka Dal) (సాదా పప్పు (Sada Pappu / Dal Fry))
+    Category: Dal and Sambar | Diet: [Veg] | Difficulty: [Easy] | Total Time: 20 mins | ID: simple-comfort-dal
+    Description: Gentle, comforting yellow lentils pressure-cooked until creamy and infused with sizzling ghee, crushed garlic cloves, cumin seeds, and a hint of asafoetida.
+
+12. Iconic Restaurant Style Dal Makhani (దాల్ మఖానీ (Dal Makhani))
+    Category: Dal and Sambar | Diet: [Veg] | Difficulty: [Advanced] | Total Time: 80 mins | ID: restaurant-dal-makhani
+    Description: Whole black urad dal and red kidney beans slow-simmered for hours with butter, cream, ripe tomato purée, and finished with the authentic smoky Dhungar charcoal method.
+
+
+===============================================================================
+ DRINKS AND JUICES (2 recipes)
+===============================================================================
+13. Royal Kadak Masala Chai (మసాలా టీ (Masala Tea))
+    Category: Drinks and Juices | Diet: [Veg] | Difficulty: [Easy] | Total Time: 13 mins | ID: kadak-masala-chai
+    Description: Rich, invigorating Indian spiced milk tea brewed with crushed fresh ginger, cardamom, cinnamon, cloves, and premium CTC tea leaves.
+
+14. South Indian Filter Coffee (Degree Kaapi) (ఫిల్టర్ కాఫీ (Filter Kaapi))
+    Category: Drinks and Juices | Diet: [Veg] | Difficulty: [Easy] | Total Time: 15 mins | ID: south-indian-filter-coffee
+    Description: Aromatic, frothy, authentic South Indian degree filter coffee brewed with freshly ground plantation coffee and chicory decoction, poured back and forth in a traditional brass dabarah and tumbler.
+
+
+===============================================================================
+ EVENING SNACKS (10 recipes)
+===============================================================================
+15. Street Style Crispy Onion Pakodi (ఉల్లిపాయ పకోడీ (Ullipaya Pakodi))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Easy] | Total Time: 22 mins | ID: crispy-onion-pakodi
+    Description: Irresistibly crunchy, tea-time fritters made with thinly sliced onions, gram flour, rice flour, crushed ginger, and curry leaves.
+
+16. Crispy Andhra Street Punugulu (పునుగులు (Punugulu))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: andhra-punugulu
+    Description: Crisp golden bite-sized fritters made from fermented idli or dosa batter mixed with onions, green chillies, and cumin, served with ginger chutney.
+
+17. Mirchi & Onion Bajji (Pakora) (ఉల్లిపాయ బజ్జి (Ullipaya Bajji))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Easy] | Total Time: 22 mins | ID: andhra-onion-bajji
+    Description: Thick round onion rings coated in a fluffy, spiced besan batter, fried to golden perfection and sprinkled with chaat masala.
+
+18. Crispy Railway Style Vegetable Cutlet (వెజ్ కట్లెట్ (Veg Cutlet))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: crispy-vegetable-cutlet
+    Description: Heart-shaped or oval vegetable patties made with beetroot, potatoes, carrots, and peas, coated in breadcrumbs and shallow fried until extra crispy.
+
+19. Street Style Veg Hakka Noodles (హక్కా నూడుల్స్ (Hakka Noodles))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Medium] | Total Time: 25 mins | ID: restaurant-hakka-noodles
+    Description: Chewy, springy wheat noodles wok-tossed on high flame with shredded cabbage, carrots, bell peppers, spring onions, garlic, and savory soy-chilli seasoning with authentic wok hei.
+
+20. Indo-Chinese Crispy Chilli Paneer (చిల్లీ పన్నీర్ (Chilli Paneer))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Medium] | Total Time: 30 mins | ID: restaurant-chilli-paneer
+    Description: Crispy batter-fried paneer cubes tossed in a spicy, tangy, glossy Indo-Chinese sauce with crunchy bell peppers, diced onions, green chillies, and toasted sesame.
+
+21. Tandoori Paneer Tikka (Stovetop Dhungar) (పన్నీర్ టిక్కా (Paneer Tikka))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: restaurant-paneer-tikka
+    Description: Char-grilled cubes of fresh paneer, crisp capsicum, and onions marinated in hung curd, mustard oil, roasted besan, and tandoori spices, smoked with natural charcoal Dhungar.
+
+22. Crispy Andhra Restaurant Chicken 65 (చికెన్ 65 (Andhra Chicken 65))
+    Category: Evening Snacks | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: andhra-chicken-65
+    Description: Iconic spicy, tangy starter: crispy bite-sized battered chicken pieces deep-fried to perfection, then flash-tempered in a sizzling wok with garlic, green chillies, curry leaves, and curd.
+
+23. Crispy Indo-Chinese Chicken Lollipop (చికెన్ లాలీపాప్ (Chicken Lollipop))
+    Category: Evening Snacks | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: chicken-lollipop
+    Description: Frenched chicken winglets shaped into meat lollipops, coated in a spicy red Indo-Chinese batter, deep-fried to a glass-shattering crisp crust, served with fiery Schezwan dipping sauce.
+
+24. Street Style Crispy Gobi Manchurian (గోబీ మంచూరియా (Gobi Manchurian))
+    Category: Evening Snacks | Diet: [Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: crispy-gobi-manchurian
+    Description: Crunchy batter-fried cauliflower florets tossed in a sizzling high-heat wok with minced garlic, spring onions, dark soy sauce, chilli sauce, and freshly cracked black pepper.
+
+
+===============================================================================
+ FESTIVAL SPECIAL RECIPES (2 recipes)
+===============================================================================
+25. Traditional Andhra Ariselu / Adhirasam (అరిసెలు (Ariselu / Nethi Ariselu))
+    Category: Festival Special Recipes | Diet: [Veg] | Difficulty: [Hard] | Total Time: 90 mins | ID: ariselu
+    Description: Auspicious Sankranti festival delicacy made from freshly pounded moist rice flour and golden jaggery syrup (Pakam), fried in pure desi ghee to golden, chewy perfection, sprinkled with toasted sesame.
+
+26. Traditional Andhra Bobbatlu (Puran Poli) (బొబ్బట్లు / పోలెలు (Bobbatlu))
+    Category: Festival Special Recipes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 60 mins | ID: bobbatlu
+    Description: Golden paper-thin flatbread stuffed with a sweet, aromatic filling of boiled chana dal, jaggery, cardamom, and nutmeg, roasted with abundant pure desi ghee.
+
+
+===============================================================================
+ NON-VEGETARIAN DISHES (7 recipes)
+===============================================================================
+27. Spicy Andhra Kodi Kura (ఆంధ్రా కోడికూర (Kodi Kura))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 50 mins | ID: andhra-chicken-curry
+    Description: Fiery and deeply flavorful country-style chicken curry infused with roasted poppy seeds, coconut, cinnamon, cloves, and spicy Guntur red chillies.
+
+28. Spicy Andhra Guddu Pulusu (Egg Curry) (గుడ్డు పులుసు / కూర (Guddu Pulusu))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: andhra-egg-curry
+    Description: Golden pan-blistered boiled eggs simmered in a tangy, spicy onion-tomato tamarind sauce with aromatic garlic and curry leaves.
+
+29. Crispy Andhra Chicken Vepudu (Chicken Fry) (ఆంధ్రా చికెన్ వేపుడు (Chicken Vepudu))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: andhra-chicken-fry
+    Description: Dry roasted tender chicken pieces coated in a fiery, dark, aromatic masala paste made with black pepper, roasted spices, and fresh curry leaves.
+
+30. Restaurant Style Murgh Makhani (Butter Chicken) (బటర్ చికెన్ (Butter Chicken))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Advanced] | Total Time: 60 mins | ID: restaurant-butter-chicken
+    Description: Succulent tandoori-spiced chicken pieces char-grilled and simmered in a velvet-smooth, buttery tomato and cashew makhani gravy infused with fenugreek and honey.
+
+31. Spicy Andhra Mutton Curry (Mamsam Kura) (ఆంధ్రా మటన్ కూర (Mamsam Kura))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Hard] | Total Time: 70 mins | ID: andhra-mutton-curry
+    Description: Succulent tender bone-in goat mutton slow-cooked in a fiery, aromatic Telugu homestyle gravy laced with poppy seeds, roasted coriander, cloves, black pepper, and curry leaves.
+
+32. Restaurant Style Chicken Tikka (చికెన్ టిక్కా (Chicken Tikka))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: chicken-tikka
+    Description: Juicy boneless chicken breast/thigh chunks steeped in a two-stage tandoori yogurt marinade, pan-seared to smoky, blistered perfection.
+
+33. Restaurant Style Chicken Tikka Masala (చికెన్ టిక్కా మసాలా (Chicken Tikka Masala))
+    Category: Non-Vegetarian Dishes | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 50 mins | ID: chicken-tikka-masala
+    Description: Char-grilled tandoori chicken tikka chunks simmered in a luscious, mildly spiced, creamy tomato-onion gravy scented with crushed kasuri methi and butter.
+
+
+===============================================================================
+ NORTH INDIAN DISHES (7 recipes)
+===============================================================================
+34. Pillowy Soft Roti / Chapati (చపాతీ / రోటీ (Chapati / Phulka))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: soft-phulka-chapati
+    Description: Everyday whole wheat Indian flatbreads that puff up like balloons on an open flame, brushed with pure ghee.
+
+35. Dhaba Style Stuffed Aloo Paratha (ఆలూ పరాఠా (Aloo Paratha))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: punjabi-aloo-paratha
+    Description: Crispy, golden whole wheat flatbreads stuffed with a spicy mashed potato filling seasoned with amchur, cumin, and fresh herbs, served with white butter.
+
+36. Restaurant Style Paneer Butter Masala (పన్నీర్ బటర్ మసాలా (Paneer Butter Masala))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: restaurant-paneer-butter-masala
+    Description: Soft succulent cottage cheese cubes simmered in a velvety, rich, mildly sweet tomato-butter gravy scented with kasuri methi.
+
+37. Dhaba Style Amritsari Chole Masala (ఛోలే మసాలా (Chole Masala))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 50 mins | ID: punjabi-chole-masala
+    Description: Rich, dark, and tangy chickpea curry cooked with black tea infusion, roasted whole spices, anardana (pomegranate seed powder), and finished with ginger juliennes and hot bhature or poori.
+
+38. Homestyle Punjabi Rajma Masala (రాజ్మా మసాలా (Rajma Masala))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 55 mins | ID: punjabi-rajma-masala
+    Description: Melt-in-mouth red kidney beans slow-cooked in a rich, velvety onion-tomato bhuna masala with roasted spices, garlic, and pure desi ghee. The ultimate soul food.
+
+39. Royal Shahi Paneer (Cashew Saffron Gravy) (షాహీ పన్నీర్ (Shahi Paneer))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: restaurant-shahi-paneer
+    Description: A royal Mughlai vegetarian delicacy: tender paneer cubes bathed in a golden, creamy cashew-onion and tomato gravy scented with cardamom, saffron, mace, and fresh cream.
+
+40. Restaurant Style Garlic Butter Naan (Tawa Method) (గార్లిక్ బటర్ నాన్ (Garlic Naan))
+    Category: North Indian Dishes | Diet: [Veg] | Difficulty: [Intermediate] | Total Time: 45 mins | ID: restaurant-style-naan
+    Description: Pillowy, chewy, blistered restaurant flatbread made without a tandoor oven using a standard iron tawa and open gas flame, brushed with garlic-infused melted butter.
+
+
+===============================================================================
+ QUICK MEALS (4 recipes)
+===============================================================================
+41. Indo-Chinese Vegetable Fried Rice (వెజ్ ఫ్రైడ్ రైస్ (Veg Fried Rice))
+    Category: Quick Meals | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: indo-chinese-veg-fried-rice
+    Description: Fluffy, separate grains of cooked rice wok-tossed on high flame with crunchy carrots, cabbage, spring onions, and a dash of soy sauce.
+
+42. Homemade Artisanal Pizza Margherita (హోమ్‌మేడ్ పిజ్జా (Homemade Pizza))
+    Category: Quick Meals | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: homemade-pizza-base
+    Description: Crisp on the outside, chewy on the inside homemade yeast-fermented pizza dough topped with crushed tomato-herb sauce, melted mozzarella, and fresh basil.
+
+43. Rustic Crusty Artisanal Bread Loaf (ఆర్టిసానల్ బ్రెడ్ (Artisan Bread))
+    Category: Quick Meals | Diet: [Veg] | Difficulty: [Hard] | Total Time: 55 mins | ID: artisanal-bread-loaf
+    Description: Crispy, crackling golden-brown crust with a light, open, airy crumb structure. Simple 4-ingredient European-style hearth bread baked in a home oven or Dutch oven.
+
+44. Classic Italian Tomato Basil Pasta (Penne all'Arrabbiata) (పాస్తా (Tomato Basil Pasta))
+    Category: Quick Meals | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: classic-tomato-basil-pasta
+    Description: Al dente Penne pasta tossed in a fiery, garlicky Italian tomato sauce infused with extra virgin olive oil, crushed red pepper flakes, fresh sweet basil, and parmesan.
+
+
+===============================================================================
+ RASAM AND SOUPS (1 recipes)
+===============================================================================
+45. Comforting Andhra Tomato Rasam (Charu) (టమాటా చారు / రసం (Tomato Charu))
+    Category: Rasam and Soups | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: andhra-tomato-rasam
+    Description: A soothing, medicinal thin soup made with crushed ripe tomatoes, tamarind, crushed black pepper, cumin, garlic, and fresh coriander stems.
+
+
+===============================================================================
+ RICE AND BIRYANI (8 recipes)
+===============================================================================
+46. Tangy Tomato Rice (Thakkali Sadam) (టమాటా రైస్ (Tomato Rice))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: tomato-rice
+    Description: Fragrant, spiced rice tossed with ripe juicy tomatoes, caramelized onions, warm spices, and fresh mint.
+
+47. Classic Andhra Lemon Rice (Chitrannam) (నిమ్మకాయ పులిహోర / చిత్రాన్నం (Chitrannam))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Easy] | Total Time: 20 mins | ID: andhra-lemon-rice
+    Description: Bright yellow, tangy tempered rice bursting with fresh lemon juice, crunchy roasted peanuts, mustard seeds, and ginger.
+
+48. Tempered Curd Rice (Daddojanam) (పెరుగన్నం / దద్దోజనం (Daddojanam))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Easy] | Total Time: 15 mins | ID: tempered-curd-rice
+    Description: Cooling and soothing mashed rice blended with fresh yogurt and milk, tempered with mustard, ginger, curry leaves, and pomegranate seeds.
+
+49. Fragrant Vegetable Pulao (వెజిటబుల్ పలావ్ (Veg Pulao))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: vegetable-pulao
+    Description: Long-grain basmati rice gently simmered with whole spices, tender garden vegetables, and aromatic mint leaves.
+
+50. Andhra Style Chicken Dum Biryani (ఆంధ్రా చికెన్ దమ్ బిర్యానీ (Chicken Biryani))
+    Category: Rice and Biryani | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 70 mins | ID: andhra-chicken-biryani
+    Description: Royal layered biryani featuring succulent marinated chicken, saffron-infused long grain basmati rice, caramelized onions, and fiery Andhra spices.
+
+51. Hyderabadi Vegetable Dum Biryani (వెజ్ దమ్ బిర్యానీ (Veg Dum Biryani))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Medium] | Total Time: 55 mins | ID: vegetable-dum-biryani
+    Description: A royal layered rice delicacy slow-cooked on dum with spiced vegetables, saffron, aromatic mint, and crispy caramelized onions.
+
+52. Steamed Plain Rice (Annam) (వేడి వేడి అన్నం (Vedi Vedi Annam))
+    Category: Rice and Biryani | Diet: [Veg] | Difficulty: [Easy] | Total Time: 20 mins | ID: steamed-plain-rice
+    Description: The cornerstone of every South Indian meal: perfectly steamed, fluffy, separate grains of white rice ready to pair with ghee, pappu, sambar, and curries.
+
+53. One-Pot Homestyle Chicken Pulao (చికెన్ పలావ్ (Chicken Pulao))
+    Category: Rice and Biryani | Diet: [Non-Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: chicken-pulao
+    Description: Tender bone-in chicken pieces and fragrant Basmati rice cooked together in one pot with whole spices, mint, coriander, and caramelized onions for a light, comforting feast.
+
+
+===============================================================================
+ SOUTH INDIAN BREAKFAST (8 recipes)
+===============================================================================
+54. Soft Mallige Idli (మల్లెపూవు ఇడ్లీ (Mallepoovu Idli))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Easy] | Total Time: 27 mins | ID: soft-idli
+    Description: Steamed, pillowy-soft and fluffy rice and lentil cakes. A wholesome and gut-friendly breakfast classic.
+
+55. Crispy Plain Dosa (సాదా దోశ (Sada Dosa))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: crispy-plain-dosa
+    Description: Golden-brown, crisp and paper-thin fermented crepes cooked on a flat tawa with a drizzle of pure ghee.
+
+56. Hotel Style Masala Dosa (మసాలా దోశ (Masala Dosa))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: masala-dosa
+    Description: Crispy golden dosa smeared with red garlic-chilli chutney and stuffed with a fragrant spiced potato filling.
+
+57. Homestyle Rava Upma (రవ్వ ఉప్మా (Rava Upma))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Easy] | Total Time: 25 mins | ID: rava-upma
+    Description: Savory roasted semolina porridge tempered with crunchy cashews, mustard seeds, curry leaves, and ginger.
+
+58. Comforting Ven Pongal (కట్టె పొంగలి (Katte Pongali))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Easy] | Total Time: 30 mins | ID: ven-pongal
+    Description: Creamy, melt-in-the-mouth rice and yellow moong dal porridge laced with ghee, crushed black pepper, cumin, and fried cashews.
+
+59. Crispy Medu Vada (గారెలు / మేదు వడ (Garelu / Medu Vada))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: crispy-medu-vada
+    Description: Crispy on the outside, fluffy and airy on the inside, golden donut-shaped lentil fritters flavored with black pepper and curry leaves.
+
+60. Golden Puffed Poori (పూరీ (Poori))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Medium] | Total Time: 30 mins | ID: puffed-poori
+    Description: Crispy, deep-fried puffed golden breads made with whole wheat flour and semolina, paired classically with potato masala (poori bhaji).
+
+61. Homestyle Vegetable Poha (Atukulu Upma) (అటుకుల ఉప్మా / పోహా (Atukula Upma))
+    Category: South Indian Breakfast | Diet: [Veg] | Difficulty: [Easy] | Total Time: 22 mins | ID: kanda-batata-poha
+    Description: Light, fluffy, and nourishing flattened rice tossed with crunchy peanuts, diced potatoes, green chillies, turmeric, and fresh coriander finished with a squeeze of lemon.
+
+
+===============================================================================
+ SWEETS AND DESSERTS (7 recipes)
+===============================================================================
+62. Traditional Rice Payasam (Ksheerannam) (పరమాన్నం / పాయసం (Paramannam / Payasam))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Easy] | Total Time: 40 mins | ID: traditional-rice-payasam
+    Description: A sacred festive dessert made by slow-simmering fragrant rice in full-cream milk, sweetened with golden jaggery or sugar, and laced with cardamom and ghee-roasted nuts.
+
+63. Quick Semiya Payasam (Vermicelli Kheer) (సేమియా పాయసం (Semiya Payasam))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Easy] | Total Time: 20 mins | ID: semiya-payasam-kheer
+    Description: A quick and delightful dessert of roasted vermicelli simmered in sweet cardamom milk, loaded with crunchy golden cashews and plump raisins.
+
+64. Traditional Melt-in-Mouth Rava Kesari (రవ్వ కేసరి (Rava Kesari))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Easy] | Total Time: 20 mins | ID: south-indian-rava-kesari
+    Description: Glossy, vibrant saffron-tinted semolina halwa enriched with generous desi ghee, fragrant cardamom, and golden roasted cashews.
+
+65. Classic Melt-in-Mouth Gulab Jamun (గులాబ్ జామూన్ (Gulab Jamun))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: classic-gulab-jamun
+    Description: Soft, spongy golden milk-solid dumplings slow-fried in ghee and soaked in warm, fragrant rose-cardamom sugar syrup.
+
+66. Traditional Soft Ghee Mysore Pak (మైసూర్ పాక్ (Mysore Pak))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Hard] | Total Time: 35 mins | ID: traditional-mysore-pak
+    Description: Royal melt-in-the-mouth sweet crafted from golden roasted besan (gram flour), pure fragrant desi ghee, and one-string sugar syrup. A festive heritage confectionery classic.
+
+67. Royal Saffron Rasmalai (రసమలై (Rasmalai))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Hard] | Total Time: 65 mins | ID: rasmalai
+    Description: Spongy, delicate cottage cheese (chenna) discs soaked in fragrant, creamy, saffron-cardamom flavored thickened milk (rabdi) topped with pistachios and almonds.
+
+68. Fudgy Dark Chocolate Brownies (చాక్లెట్ బ్రౌనీస్ (Chocolate Brownies))
+    Category: Sweets and Desserts | Diet: [Veg] | Difficulty: [Medium] | Total Time: 40 mins | ID: chocolate-brownies
+    Description: Ultra-fudgy, decadent dark chocolate brownies with a signature shiny crackly tissue-paper top, rich cocoa center, and toasted walnuts.
+
+
+===============================================================================
+ VEGETARIAN CURRIES (7 recipes)
+===============================================================================
+69. Crispy Andhra Bendakaya Fry (Okra Stir-Fry) (బెండకాయ వేపుడు (Bendakaya Vepudu))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Easy] | Total Time: 35 mins | ID: andhra-bendakaya-fry
+    Description: Crispy, non-slimy chopped okra tossed with roasted peanuts, garlic cloves, curry leaves, and spicy red chilli powder.
+
+70. Crispy Andhra Potato Fry (Aloo Vepudu) (బంగాళాదుంప వేపుడు (Bangaladumpa Vepudu))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Easy] | Total Time: 30 mins | ID: andhra-potato-fry
+    Description: Golden, crusty cubed potatoes sautéed with crushed garlic, cumin, curry leaves, and spicy homemade karam podi.
+
+71. South Indian Beans Poriyal (Stir-Fry) (బీన్స్ తాలింపు (Beans Talimpu))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Easy] | Total Time: 22 mins | ID: beans-poriyal
+    Description: Crisp-tender French beans gently steamed and tossed with crunchy lentils, green chillies, and freshly grated coconut.
+
+72. Everyday Vegetable Stir-Fry (Gobi Matar Carrot Fry) (కూరగాయల వేపుడు (Kooragayala Vepudu))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Easy] | Total Time: 30 mins | ID: homestyle-vegetable-stir-fry
+    Description: Crisp-tender medley of seasonal vegetables sautéed with mustard, cumin, curry leaves, turmeric, and freshly roasted spice powder. Clean, colorful, and healthy.
+
+73. Homestyle Palak Paneer (పాలక్ పన్నీర్ (Palak Paneer))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: palak-paneer
+    Description: Nutritious vibrant green spinach gravy simmered with delicate cubes of fresh paneer, tempered with garlic, cumin, and finished with a touch of fresh cream.
+
+74. Hotel Style Vegetable Kurma (వెజిటబుల్ కుర్మా (Veg Kurma))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Medium] | Total Time: 45 mins | ID: vegetable-kurma
+    Description: Fragrant, mildly spiced South Indian hotel-style vegetable stew simmered in a silky ground coconut, cashew, fennel, and poppy seed paste. Perfect companion for parotta, chapati, and poori.
+
+75. Restaurant Style Kadai Paneer (కడాయి పన్నీర్ (Kadai Paneer))
+    Category: Vegetarian Curries | Diet: [Veg] | Difficulty: [Medium] | Total Time: 35 mins | ID: kadai-paneer
+    Description: Succulent paneer cubes and crunchy bell pepper petals tossed in a spicy, semi-dry tomato gravy infused with freshly roasted, coarsely pounded Kadai Masala.
+
+

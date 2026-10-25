@@ -18,6 +18,7 @@ $recipes_part3 = [
         'description' => 'Aromatic, frothy, authentic South Indian degree filter coffee brewed with freshly ground plantation coffee and chicory decoction, poured back and forth in a traditional brass dabarah and tumbler.',
         'icon' => '☕',
         'accent_color' => '#EFEBE9',
+        'image' => 'assets/images/recipes/South Indian Filter Coffee.jpg',
         'utensils' => ['Traditional stainless steel or brass coffee filter with pressing disc', 'Dabarah and tumbler set', 'Milk boiling saucepan'],
         'ingredients' => [
             ['name' => 'Filter Coffee Powder (80:20 Coffee to Chicory)', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'Coarse ground plantation peaberry / arabica blend'],
@@ -60,6 +61,7 @@ $recipes_part3 = [
         'description' => 'The cornerstone of every South Indian meal: perfectly steamed, fluffy, separate grains of white rice ready to pair with ghee, pappu, sambar, and curries.',
         'icon' => '🍚',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Steamed Plain Rice.jpg',
         'utensils' => ['Deep heavy-bottom saucepan or pressure cooker', 'Measuring cup', 'Fork or flat spatula'],
         'ingredients' => [
             ['name' => 'Sona Masoori or Raw Rice', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Aged medium grain rice'],
@@ -98,6 +100,7 @@ $recipes_part3 = [
         'description' => 'Light, fluffy, and nourishing flattened rice tossed with crunchy peanuts, diced potatoes, green chillies, turmeric, and fresh coriander finished with a squeeze of lemon.',
         'icon' => '🥣',
         'accent_color' => '#FEF3C7',
+        'image' => 'assets/images/recipes/Homestyle Vegetable Poha.jpg',
         'utensils' => ['Fine colander/mesh strainer', 'Wide kadai', 'Spatula'],
         'ingredients' => [
             ['name' => 'Thick Poha (Flattened rice)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Do not use thin nylon poha'],
@@ -147,6 +150,7 @@ $recipes_part3 = [
         'description' => 'Gentle, comforting yellow lentils pressure-cooked until creamy and infused with sizzling ghee, crushed garlic cloves, cumin seeds, and a hint of asafoetida.',
         'icon' => '🥣',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Simple Everyday Comfort Dal.jpg',
         'utensils' => ['Pressure cooker', 'Tadka ladle', 'Wooden masher (Mathani)'],
         'ingredients' => [
             ['name' => 'Yellow Moong Dal or Toor Dal', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed well'],
@@ -194,6 +198,7 @@ $recipes_part3 = [
         'description' => 'Crisp-tender medley of seasonal vegetables sautéed with mustard, cumin, curry leaves, turmeric, and freshly roasted spice powder. Clean, colorful, and healthy.',
         'icon' => '🥕',
         'accent_color' => '#F0FDF4',
+        'image' => 'assets/images/recipes/Everyday Vegetable Stir-Fry (Gobi Matar Carrot Fry).jpg',
         'utensils' => ['Wide heavy-bottom Kadai', 'Cutting board & knife', 'Spatula'],
         'ingredients' => [
             ['name' => 'Carrots', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Diced small'],
@@ -240,6 +245,7 @@ $recipes_part3 = [
         'description' => 'Rich, dark, and tangy chickpea curry cooked with black tea infusion, roasted whole spices, anardana (pomegranate seed powder), and finished with ginger juliennes and hot bhature or poori.',
         'icon' => '🍲',
         'accent_color' => '#FFF7ED',
+        'image' => 'assets/images/recipes/Dhaba Style Amritsari Chole Masala.jpg',
         'utensils' => ['Pressure cooker', 'Heavy kadai', 'Tea bag or spice potli cloth'],
         'ingredients' => [
             ['name' => 'White Kabuli Chana (Chickpeas)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Soaked overnight 8 hours'],
@@ -288,6 +294,7 @@ $recipes_part3 = [
         'description' => 'Melt-in-mouth red kidney beans slow-cooked in a rich, velvety onion-tomato bhuna masala with roasted spices, garlic, and pure desi ghee. The ultimate soul food.',
         'icon' => '🍲',
         'accent_color' => '#FFF1EB',
+        'image' => 'assets/images/recipes/Homestyle Punjabi Rajma Masala.jpg',
         'utensils' => ['Pressure cooker', 'Heavy kadai', 'Masher'],
         'ingredients' => [
             ['name' => 'Red Kidney Beans (Chitra or Kashmiri Rajma)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Soaked overnight for 8-10 hours'],
@@ -335,6 +342,7 @@ $recipes_part3 = [
         'description' => 'A royal Mughlai vegetarian delicacy: tender paneer cubes bathed in a golden, creamy cashew-onion and tomato gravy scented with cardamom, saffron, mace, and fresh cream.',
         'icon' => '🧀',
         'accent_color' => '#FFFBEB',
+        'image' => 'assets/images/recipes/Royal Shahi Paneer.jpg',
         'utensils' => ['Blender', 'Fine strainer', 'Heavy saucier / Kadai'],
         'ingredients' => [
             ['name' => 'Fresh Malai Paneer', 'quantity' => 250, 'unit' => 'grams', 'notes' => 'Cut into triangles or cubes'],
@@ -381,6 +389,7 @@ $recipes_part3 = [
         'description' => 'Whole black urad dal and red kidney beans slow-simmered for hours with butter, cream, ripe tomato purée, and finished with the authentic smoky Dhungar charcoal method.',
         'icon' => '🥣',
         'accent_color' => '#EFEBE9',
+        'image' => 'assets/images/recipes/Iconic Restaurant Style Dal Makhani.jpg',
         'utensils' => ['Pressure cooker', 'Heavy stockpot or Handi', 'Charcoal piece & metal cup for Dhungar'],
         'ingredients' => [
             ['name' => 'Whole Black Urad Dal (Sabut Urad)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed and soaked overnight 8-10 hours'],
@@ -427,6 +436,7 @@ $recipes_part3 = [
         'description' => 'Succulent tandoori-spiced chicken pieces char-grilled and simmered in a velvet-smooth, buttery tomato and cashew makhani gravy infused with fenugreek and honey.',
         'icon' => '🍗',
         'accent_color' => '#FFF1EB',
+        'image' => 'assets/images/recipes/Restaurant Style Murgh Makhani(Butter Chicken).jpg',
         'utensils' => ['Cast iron grill pan or tawa', 'Blender', 'Fine strainer', 'Heavy kadai'],
         'ingredients' => [
             ['name' => 'Boneless Chicken (Thigh pieces preferred)', 'quantity' => 500, 'unit' => 'grams', 'notes' => 'Cut into bite-sized chunks'],
@@ -474,6 +484,7 @@ $recipes_part3 = [
         'description' => 'Pillowy, chewy, blistered restaurant flatbread made without a tandoor oven using a standard iron tawa and open gas flame, brushed with garlic-infused melted butter.',
         'icon' => '🫓',
         'accent_color' => '#FFFBEB',
+        'image' => 'assets/images/recipes/Restaurant Style Garlic Butter Naan.jpg',
         'utensils' => ['Heavy cast iron tawa with handle (NOT non-stick)', 'Rolling pin', 'Pastry brush', 'Tongs'],
         'ingredients' => [
             ['name' => 'All-Purpose Flour (Maida)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Or 50:50 maida and whole wheat'],
@@ -522,6 +533,7 @@ $recipes_part3 = [
         'description' => 'Chewy, springy wheat noodles wok-tossed on high flame with shredded cabbage, carrots, bell peppers, spring onions, garlic, and savory soy-chilli seasoning with authentic wok hei.',
         'icon' => '🥢',
         'accent_color' => '#FFFBEB',
+        'image' => 'assets/images/recipes/Street Style Veg Hakka Noodles.jpg',
         'utensils' => ['Carbon steel wok or wide kadai', 'Large pot for boiling noodles', 'Colander & tongs'],
         'ingredients' => [
             ['name' => 'Hakka Noodles (Dry)', 'quantity' => 200, 'unit' => 'grams', 'notes' => 'Eggless wheat noodles'],
@@ -571,6 +583,7 @@ $recipes_part3 = [
         'description' => 'Crispy batter-fried paneer cubes tossed in a spicy, tangy, glossy Indo-Chinese sauce with crunchy bell peppers, diced onions, green chillies, and toasted sesame.',
         'icon' => '🥢',
         'accent_color' => '#FFF1EB',
+        'image' => 'assets/images/recipes/Indo-Chinese Crispy Chilli Paneer.jpg',
         'utensils' => ['Deep frying kadai', 'Wok', 'Perforated skimmer'],
         'ingredients' => [
             ['name' => 'Fresh Paneer', 'quantity' => 250, 'unit' => 'grams', 'notes' => 'Cut into bite-sized cubes'],

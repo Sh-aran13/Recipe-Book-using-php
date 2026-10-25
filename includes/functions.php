@@ -377,3 +377,88 @@ function get_related_lessons_for_recipe(array $recipe): array {
 
     return array_values($matched);
 }
+
+/**
+ * ============================================================
+ * RECIPE RESCUE ASSISTANT HELPERS
+ * ============================================================
+ */
+
+function get_rescue_entries(): array {
+    static $entries = null;
+    if ($entries === null) {
+        $file = __DIR__ . '/rescue-data.php';
+        if (file_exists($file)) {
+            require_once $file;
+            $raw = function_exists('get_rescue_knowledge_base') ? get_rescue_knowledge_base() : ($rescue_knowledge_base ?? []);
+            $entries = [];
+            foreach ($raw as $k => $item) {
+                // Normalize field aliases so UI never encounters undefined key notices
+                $item['summary'] = $item['summary'] ?? ($item['symptoms'] ?? '');
+                $item['symptoms'] = is_array($item['symptoms'] ?? null) ? $item['symptoms'] : (array)($item['symptoms'] ?? []);
+                $item['dish_names'] = $item['dish_names'] ?? ($item['dishes'] ?? []);
+                $item['dishes'] = $item['dish_names'];
+                $rawAlts = (array)($item['alternative_methods'] ?? ($item['alternatives'] ?? []));
+                $normAlts = [];
+                foreach ($rawAlts as $alt) {
+                    if (is_array($alt)) {
+                        $alt['name'] = $alt['name'] ?? 'Alternative Method';
+                        $alt['action'] = $alt['action'] ?? ($alt['method'] ?? '');
+                        $alt['why_it_works'] = $alt['why_it_works'] ?? ($alt['why'] ?? ($alt['suitability'] ?? 'Provides an alternative kitchen recovery technique.'));
+                        $alt['best_for'] = $alt['best_for'] ?? ($alt['suitability'] ?? 'General home-cooked variations');
+                        $alt['limitations'] = $alt['limitations'] ?? ($alt['watch_out'] ?? 'Use in moderation to preserve core flavors.');
+                        $normAlts[] = $alt;
+                    }
+                }
+                $item['alternative_methods'] = $normAlts;
+                $item['alternatives'] = $normAlts;
+                $item['prevention_tips'] = $item['prevention_tips'] ?? ($item['prevention'] ?? []);
+                $item['prevention'] = $item['prevention_tips'];
+                $item['cooking_science'] = $item['cooking_science'] ?? ($item['science'] ?? '');
+                $item['science'] = $item['cooking_science'];
+                $item['related_recipes'] = $item['related_recipes'] ?? ($item['related_recipe_ids'] ?? []);
+                $item['related_recipe_ids'] = $item['related_recipes'];
+                $item['related_lessons'] = $item['related_lessons'] ?? ($item['related_lesson_ids'] ?? []);
+                $item['related_lesson_ids'] = $item['related_lessons'];
+                $item['severity'] = $item['severity'] ?? 'Moderate';
+                $item['immediate_steps'] = $item['immediate_steps'] ?? [];
+                $item['what_not_to_do'] = $item['what_not_to_do'] ?? [];
+                $item['causes'] = $item['causes'] ?? [];
+                $item['keywords'] = $item['keywords'] ?? [];
+                $item['items_needed'] = $item['items_needed'] ?? ['required' => [], 'optional' => []];
+
+                $entries[$k] = $item;
+            }
+        } else {
+            $entries = [];
+        }
+    }
+    return $entries;
+}
+
+function find_rescue_by_id(string $id): ?array {
+    $entries = get_rescue_entries();
+    foreach ($entries as $item) {
+        if (isset($item['id']) && strtolower(trim($item['id'])) === strtolower(trim($id))) {
+            return $item;
+        }
+    }
+    return null;
+}
+
+function get_rescue_categories(): array {
+    return [
+        'all' => ['name' => 'All Problems', 'icon' => '🛟', 'count' => 51],
+        'Curries & Gravies' => ['name' => 'Curries & Gravies', 'icon' => '🍲'],
+        'Rice & Biryani' => ['name' => 'Rice & Biryani', 'icon' => '🍚'],
+        'Roti, Chapati & Paratha' => ['name' => 'Roti & Chapati', 'icon' => '🫓'],
+        'Dosa, Idli & Fermented' => ['name' => 'Dosa & Idli', 'icon' => '🥞'],
+        'Cakes & Baking' => ['name' => 'Cakes & Baking', 'icon' => '🎂'],
+        'Indian Sweets & Desserts' => ['name' => 'Sweets & Desserts', 'icon' => '🍨'],
+        'Snacks & Frying' => ['name' => 'Snacks & Frying', 'icon' => '🥟'],
+        'Dal, Sambar & Rasam' => ['name' => 'Dal, Sambar & Rasam', 'icon' => '🥣'],
+        'Vegetables & Side Dishes' => ['name' => 'Vegetables & Sides', 'icon' => '🥗'],
+        'General Cooking & Safety' => ['name' => 'General Cooking', 'icon' => '🍳'],
+    ];
+}
+

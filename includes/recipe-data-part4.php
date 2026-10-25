@@ -18,6 +18,7 @@ $recipes_part4 = [
         'description' => 'Nutritious vibrant green spinach gravy simmered with delicate cubes of fresh paneer, tempered with garlic, cumin, and finished with a touch of fresh cream.',
         'icon' => '🥬',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/Homestyle Palak Paneer.jpg',
         'utensils' => ['Blanching saucepan', 'Ice water bath bowl', 'Blender', 'Kadai'],
         'ingredients' => [
             ['name' => 'Fresh Spinach (Palak)', 'quantity' => 2, 'unit' => 'bunches', 'notes' => 'Tender leaves washed clean (~350g)'],
@@ -68,6 +69,7 @@ $recipes_part4 = [
         'description' => 'Fragrant, mildly spiced South Indian hotel-style vegetable stew simmered in a silky ground coconut, cashew, fennel, and poppy seed paste. Perfect companion for parotta, chapati, and poori.',
         'icon' => '🍲',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Hotel Style Vegetable Kurma.jpg',
         'utensils' => ['Mixer grinder', 'Pressure cooker or heavy kadai'],
         'ingredients' => [
             ['name' => 'Mixed Vegetables (Carrot, Beans, Peas, Potato)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Diced evenly'],
@@ -118,6 +120,7 @@ $recipes_part4 = [
         'description' => 'Succulent paneer cubes and crunchy bell pepper petals tossed in a spicy, semi-dry tomato gravy infused with freshly roasted, coarsely pounded Kadai Masala.',
         'icon' => '🥘',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Restaurant Style Kadai Paneer.jpg',
         'utensils' => ['Heavy cast iron kadai', 'Spice mortar pestle or spice grinder'],
         'ingredients' => [
             ['name' => 'Fresh Paneer', 'quantity' => 250, 'unit' => 'grams', 'notes' => 'Cubed into bite-sized pieces'],
@@ -168,6 +171,7 @@ $recipes_part4 = [
         'description' => 'Tender bone-in chicken pieces and fragrant Basmati rice cooked together in one pot with whole spices, mint, coriander, and caramelized onions for a light, comforting feast.',
         'icon' => '🍗',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/One-Pot Homestyle Chicken Pulao.jpg',
         'utensils' => ['Heavy bottom saucepan or pressure cooker with tight lid'],
         'ingredients' => [
             ['name' => 'Chicken (Bone-in, Curry cut)', 'quantity' => 500, 'unit' => 'grams', 'notes' => 'Juicy thigh and drumstick pieces'],
@@ -220,6 +224,7 @@ $recipes_part4 = [
         'description' => 'Succulent tender bone-in goat mutton slow-cooked in a fiery, aromatic Telugu homestyle gravy laced with poppy seeds, roasted coriander, cloves, black pepper, and curry leaves.',
         'icon' => '🥩',
         'accent_color' => '#FBE9E7',
+        'image' => 'assets/images/recipes/Spicy Andhra Mutton Curry.jpg',
         'utensils' => ['Pressure cooker', 'Heavy bottom kadai', 'Spice grinder'],
         'ingredients' => [
             ['name' => 'Mutton (Goat Meat, Bone-in Curry Cut)', 'quantity' => 600, 'unit' => 'grams', 'notes' => 'Tender shoulder & ribs piece'],
@@ -271,6 +276,7 @@ $recipes_part4 = [
         'description' => 'The crown jewel of Telugu cuisine: succulent chicken cooked in a tangy, sour sorrel leaf (Gongura) paste with caramelized onions, roasted garlic, and fiery Guntur chillies.',
         'icon' => '🌿',
         'accent_color' => '#F1F8E9',
+        'image' => 'assets/images/recipes/Andhra Gongura Chicken.jpg',
         'utensils' => ['Wide kadai', 'Blender / Mortar', 'Lid'],
         'ingredients' => [
             ['name' => 'Chicken (Curry Cut, bone-in)', 'quantity' => 500, 'unit' => 'grams', 'notes' => 'Bite-sized pieces'],
@@ -319,6 +325,7 @@ $recipes_part4 = [
         'description' => 'Royal melt-in-the-mouth sweet crafted from golden roasted besan (gram flour), pure fragrant desi ghee, and one-string sugar syrup. A festive heritage confectionery classic.',
         'icon' => '🧈',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Traditional Soft Ghee Mysore Pak.jpg',
         'utensils' => ['Heavy bottom Kadai or Uruli', 'Small saucepan for keeping ghee hot', 'Square greased tray or tin', 'Flat wooden spatula'],
         'ingredients' => [
             ['name' => 'Besan (Gram Flour)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Fine quality, sifted twice without lumps'],
@@ -364,6 +371,7 @@ $recipes_part4 = [
         'description' => 'Spongy, delicate cottage cheese (chenna) discs soaked in fragrant, creamy, saffron-cardamom flavored thickened milk (rabdi) topped with pistachios and almonds.',
         'icon' => '🥛',
         'accent_color' => '#FFF9C4',
+        'image' => 'assets/images/recipes/Royal Saffron Rasmalai.jpg',
         'utensils' => ['Heavy milk saucepan', 'Wide pot for sugar boiling', 'Cheesecloth / Muslin cloth', 'Tongs or slotted spoon'],
         'ingredients' => [
             ['name' => 'Cow Milk (Full Cream)', 'quantity' => 1, 'unit' => 'litre', 'notes' => 'For fresh soft chenna discs'],
@@ -409,6 +417,7 @@ $recipes_part4 = [
         'description' => 'Auspicious Sankranti festival delicacy made from freshly pounded moist rice flour and golden jaggery syrup (Pakam), fried in pure desi ghee to golden, chewy perfection, sprinkled with toasted sesame.',
         'icon' => '🪔',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Traditional Andhra Ariselu.jpg',
         'utensils' => ['Wet rice flour sieve', 'Heavy jaggery pot', 'Deep frying kadai', 'Ariselu wooden press (Arisela chekka)'],
         'ingredients' => [
             ['name' => 'Raw Rice (Biyyam)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Soaked 24 hrs, drained and ground wet into damp flour'],
@@ -453,6 +462,7 @@ $recipes_part4 = [
         'description' => 'Golden paper-thin flatbread stuffed with a sweet, aromatic filling of boiled chana dal, jaggery, cardamom, and nutmeg, roasted with abundant pure desi ghee.',
         'icon' => '🥞',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Traditional Andhra Bobbatlu.jpg',
         'utensils' => ['Pressure cooker', 'Tawa', 'Rolling pin or banana leaf / parchment paper'],
         'ingredients' => [
             ['name' => 'Chana Dal (Bengal Gram)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed and cooked soft'],
@@ -497,6 +507,7 @@ $recipes_part4 = [
         'description' => 'Char-grilled cubes of fresh paneer, crisp capsicum, and onions marinated in hung curd, mustard oil, roasted besan, and tandoori spices, smoked with natural charcoal Dhungar.',
         'icon' => '🍢',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Tandoori Paneer Tikka.jpg',
         'utensils' => ['Cast iron grill pan or tawa', 'Wooden skewers (soaked)', 'Natural charcoal piece & tongs'],
         'ingredients' => [
             ['name' => 'Fresh Firm Paneer', 'quantity' => 300, 'unit' => 'grams', 'notes' => 'Cut into 1.5-inch thick square cubes'],
@@ -544,6 +555,7 @@ $recipes_part4 = [
         'description' => 'Juicy boneless chicken breast/thigh chunks steeped in a two-stage tandoori yogurt marinade, pan-seared to smoky, blistered perfection.',
         'icon' => '🍗',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Restaurant Style Chicken Tikka.jpg',
         'utensils' => ['Heavy cast iron grill tawa', 'Wooden skewers', 'Charcoal cup for Dhungar'],
         'ingredients' => [
             ['name' => 'Boneless Chicken (Thigh or Breast)', 'quantity' => 500, 'unit' => 'grams', 'notes' => 'Cut into 1.5-inch cubes'],
@@ -588,6 +600,7 @@ $recipes_part4 = [
         'description' => 'Crisp on the outside, chewy on the inside homemade yeast-fermented pizza dough topped with crushed tomato-herb sauce, melted mozzarella, and fresh basil.',
         'icon' => '🍕',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Homemade Artisanal Pizza Margherita.jpg',
         'utensils' => ['Baking sheet or cast iron pan', 'Oven preheated to maximum (220-240°C)', 'Rolling pin or hands'],
         'ingredients' => [
             ['name' => 'All-Purpose Flour (Maida) or Bread Flour', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'High protein'],
@@ -634,6 +647,7 @@ $recipes_part4 = [
         'description' => 'Crispy, crackling golden-brown crust with a light, open, airy crumb structure. Simple 4-ingredient European-style hearth bread baked in a home oven or Dutch oven.',
         'icon' => '🍞',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Rustic Crusty Artisanal Bread Loaf.jpg',
         'utensils' => ['Cast iron Dutch oven or heavy ovenproof pot with lid', 'Parchment paper', 'Razor blade (lame) for scoring'],
         'ingredients' => [
             ['name' => 'All-Purpose Flour or Bread Flour', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Unbleached (~380g)'],
@@ -677,6 +691,7 @@ $recipes_part4 = [
         'description' => 'Ultra-fudgy, decadent dark chocolate brownies with a signature shiny crackly tissue-paper top, rich cocoa center, and toasted walnuts.',
         'icon' => '🍫',
         'accent_color' => '#EFEBE9',
+        'image' => 'assets/images/recipes/Fudgy Dark Chocolate Brownies.jpg',
         'utensils' => ['8x8 inch square baking tin', 'Parchment paper', 'Heatproof glass bowl for double boiler', 'Whisk'],
         'ingredients' => [
             ['name' => 'Dark Chocolate (55% or 70% Cocoa)', 'quantity' => 150, 'unit' => 'grams', 'notes' => 'Coarsely chopped'],
@@ -723,6 +738,7 @@ $recipes_part4 = [
         'description' => 'Al dente Penne pasta tossed in a fiery, garlicky Italian tomato sauce infused with extra virgin olive oil, crushed red pepper flakes, fresh sweet basil, and parmesan.',
         'icon' => '🍝',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Classic Italian Tomato Basil Pasta.jpg',
         'utensils' => ['Deep pasta boiling pot', 'Colander', 'Wide saute skillet'],
         'ingredients' => [
             ['name' => 'Penne or Rigatoni Pasta', 'quantity' => 250, 'unit' => 'grams', 'notes' => '100% durum wheat semolina'],
@@ -768,6 +784,7 @@ $recipes_part4 = [
         'description' => 'Char-grilled tandoori chicken tikka chunks simmered in a luscious, mildly spiced, creamy tomato-onion gravy scented with crushed kasuri methi and butter.',
         'icon' => '🥘',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Restaurant Style Chicken Tikka Masala.jpg',
         'utensils' => ['Grill pan for chicken', 'Wide kadai', 'Blender'],
         'ingredients' => [
             ['name' => 'Boneless Chicken Tikka (pre-grilled)', 'quantity' => 400, 'unit' => 'grams', 'notes' => 'Cubed, lightly charred'],
@@ -812,6 +829,7 @@ $recipes_part4 = [
         'description' => 'Iconic spicy, tangy starter: crispy bite-sized battered chicken pieces deep-fried to perfection, then flash-tempered in a sizzling wok with garlic, green chillies, curry leaves, and curd.',
         'icon' => '🍗',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Crispy Andhra Restaurant Chicken 65.jpg',
         'utensils' => ['Deep frying kadai', 'Wok for tempering', 'Perforated skimmer'],
         'ingredients' => [
             ['name' => 'Boneless Chicken', 'quantity' => 400, 'unit' => 'grams', 'notes' => 'Cut into bite-sized 1-inch pieces'],
@@ -857,6 +875,7 @@ $recipes_part4 = [
         'description' => 'Frenched chicken winglets shaped into meat lollipops, coated in a spicy red Indo-Chinese batter, deep-fried to a glass-shattering crisp crust, served with fiery Schezwan dipping sauce.',
         'icon' => '🍗',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Crispy Indo-Chinese Chicken Lollipop.jpg',
         'utensils' => ['Deep frying kadai', 'Skimmer', 'Kitchen foil for bone wrapping'],
         'ingredients' => [
             ['name' => 'Chicken Wings (Frenched into Lollipops)', 'quantity' => 8, 'unit' => 'pieces', 'notes' => 'Meat pushed down to bone base'],
@@ -900,6 +919,7 @@ $recipes_part4 = [
         'description' => 'Crunchy batter-fried cauliflower florets tossed in a sizzling high-heat wok with minced garlic, spring onions, dark soy sauce, chilli sauce, and freshly cracked black pepper.',
         'icon' => '🥦',
         'accent_color' => '#F1F8E9',
+        'image' => 'assets/images/recipes/Street Style Crispy Gobi Manchurian.jpg',
         'utensils' => ['Blanching saucepan', 'Deep frying kadai', 'High-heat wok'],
         'ingredients' => [
             ['name' => 'Cauliflower (Gobi)', 'quantity' => 1, 'unit' => 'medium', 'notes' => 'Cut into bite-sized florets (~350g)'],

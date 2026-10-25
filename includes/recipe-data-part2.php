@@ -17,6 +17,7 @@ $recipes_part2 = [
         'description' => 'Golden, crusty cubed potatoes sautéed with crushed garlic, cumin, curry leaves, and spicy homemade karam podi.',
         'icon' => '🥔',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Crispy Andhra Potato Fry (Aloo Vepudu).jpg',
         'ingredients' => [
             ['name' => 'Potatoes (Bangaladumpa)', 'quantity' => 4, 'unit' => 'medium', 'notes' => 'Peeled and cut into 1/2 inch cubes'],
             ['name' => 'Garlic cloves', 'quantity' => 8, 'unit' => 'cloves', 'notes' => 'Coarsely crushed with skin'],
@@ -66,6 +67,7 @@ $recipes_part2 = [
         'description' => 'Crisp-tender French beans gently steamed and tossed with crunchy lentils, green chillies, and freshly grated coconut.',
         'icon' => '🥬',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/South Indian Beans Poriyal (Stir-Fry).jpg',
         'ingredients' => [
             ['name' => 'French Green Beans', 'quantity' => 300, 'unit' => 'grams', 'notes' => 'Trimmed and finely chopped'],
             ['name' => 'Freshly Grated Coconut', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'Sweet fresh coconut'],
@@ -115,6 +117,7 @@ $recipes_part2 = [
         'description' => 'Creamy, silky fresh coconut ground with roasted gram, ginger, green chillies, and finished with a fragrant mustard-curry leaf tadka.',
         'icon' => '🥥',
         'accent_color' => '#F5F5F5',
+        'image' => 'assets/images/recipes/Hotel Style White Coconut Chutney.jpg',
         'ingredients' => [
             ['name' => 'Fresh Grated Coconut', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'White portion only (no brown skin)'],
             ['name' => 'Roasted Gram (Dalia / Putnala Pappu)', 'quantity' => 2, 'unit' => 'tablespoons', 'notes' => 'Gives body and creaminess'],
@@ -164,6 +167,7 @@ $recipes_part2 = [
         'description' => 'Rich, nutty, and mildly tangy Andhra breakfast chutney made with roasted peanuts, sautéed green chillies, garlic, and tamarind.',
         'icon' => '🥜',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Andhra Palli Chutney.jpg',
         'ingredients' => [
             ['name' => 'Raw Peanuts (Pallilu)', 'quantity' => 0.75, 'unit' => 'cup', 'notes' => 'Good quality'],
             ['name' => 'Green Chillies', 'quantity' => 4, 'unit' => '', 'notes' => 'Slit lengthwise'],
@@ -212,6 +216,7 @@ $recipes_part2 = [
         'description' => 'A fiery and tangy rustic chutney made with ripe tomatoes, roasted red chillies, coriander seeds, garlic, and tamarind.',
         'icon' => '🍅',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Spicy Andhra Tomato Chutney.jpg',
         'ingredients' => [
             ['name' => 'Country Ripe Tomatoes', 'quantity' => 4, 'unit' => 'medium', 'notes' => 'Roughly chopped'],
             ['name' => 'Dry Red Chillies', 'quantity' => 6, 'unit' => '', 'notes' => 'Guntur variety for heat'],
@@ -261,6 +266,7 @@ $recipes_part2 = [
         'description' => 'The crown jewel of Andhra cuisine—tangy sorrel (gongura) leaves slow-cooked with roasted spices, garlic, and fiery red chillies.',
         'icon' => '🌿',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/Royal Andhra Gongura Pachadi.jpg',
         'ingredients' => [
             ['name' => 'Red Stem Sorrel Leaves (Gongura)', 'quantity' => 4, 'unit' => 'tightly packed cups', 'notes' => 'Plucked, washed, and dried completely'],
             ['name' => 'Dry Red Chillies', 'quantity' => 10, 'unit' => '', 'notes' => 'Spicy Andhra variety'],
@@ -308,6 +314,7 @@ $recipes_part2 = [
         'description' => 'Everyday whole wheat Indian flatbreads that puff up like balloons on an open flame, brushed with pure ghee.',
         'icon' => '🫓',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Pillowy Soft Roti.jpg',
         'ingredients' => [
             ['name' => 'Whole Wheat Flour (Atta)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Chakki fresh atta'],
             ['name' => 'Lukewarm Water', 'quantity' => 0.75, 'unit' => 'cup', 'notes' => 'Add gradually as needed'],
@@ -355,6 +362,7 @@ $recipes_part2 = [
         'description' => 'Crispy, deep-fried puffed golden breads made with whole wheat flour and semolina, paired classically with potato masala (poori bhaji).',
         'icon' => '🫓',
         'accent_color' => '#FFE082',
+        'image' => 'assets/images/recipes/Golden Puffed Poori.jpg',
         'ingredients' => [
             ['name' => 'Whole Wheat Flour (Atta)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Fine chakki atta'],
             ['name' => 'Semolina (Bombay Rava / Suji)', 'quantity' => 2, 'unit' => 'tablespoons', 'notes' => 'Keeps pooris puffed and crispy longer'],
@@ -401,6 +409,7 @@ $recipes_part2 = [
         'description' => 'Crispy, golden whole wheat flatbreads stuffed with a spicy mashed potato filling seasoned with amchur, cumin, and fresh herbs, served with white butter.',
         'icon' => '🫓',
         'accent_color' => '#FFE082',
+        'image' => 'assets/images/recipes/Dhaba Style Stuffed Aloo Paratha.jpg',
         'ingredients' => [
             ['name' => 'Whole Wheat Flour (Atta)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Kneaded into soft dough'],
             ['name' => 'Potatoes (Aloo)', 'quantity' => 4, 'unit' => 'medium', 'notes' => 'Boiled, peeled, and mashed lump-free'],
@@ -452,6 +461,7 @@ $recipes_part2 = [
         'description' => 'Soft succulent cottage cheese cubes simmered in a velvety, rich, mildly sweet tomato-butter gravy scented with kasuri methi.',
         'icon' => '🧀',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Restaurant Style Paneer Butter Masala.jpg',
         'ingredients' => [
             ['name' => 'Fresh Paneer cubes', 'quantity' => 250, 'unit' => 'grams', 'notes' => 'Soaked in warm water for softness'],
             ['name' => 'Ripe Red Tomatoes', 'quantity' => 5, 'unit' => 'medium', 'notes' => 'Chopped'],
@@ -505,6 +515,7 @@ $recipes_part2 = [
         'description' => 'Fluffy, separate grains of cooked rice wok-tossed on high flame with crunchy carrots, cabbage, spring onions, and a dash of soy sauce.',
         'icon' => '🥢',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Indo-Chinese Vegetable Fried Rice.jpg',
         'ingredients' => [
             ['name' => 'Cooked Long Grain Basmati Rice', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Chilled in fridge, grains separated'],
             ['name' => 'Garlic cloves', 'quantity' => 6, 'unit' => 'cloves', 'notes' => 'Finely minced'],
@@ -556,6 +567,7 @@ $recipes_part2 = [
         'description' => 'Golden pan-blistered boiled eggs simmered in a tangy, spicy onion-tomato tamarind sauce with aromatic garlic and curry leaves.',
         'icon' => '🥚',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Spicy Andhra Guddu Pulusu.jpg',
         'ingredients' => [
             ['name' => 'Hard Boiled Eggs', 'quantity' => 4, 'unit' => 'whole', 'notes' => 'Peeled and lightly pricked with fork'],
             ['name' => 'Onions', 'quantity' => 2, 'unit' => 'medium', 'notes' => 'Finely chopped'],
@@ -608,6 +620,7 @@ $recipes_part2 = [
         'description' => 'Dry roasted tender chicken pieces coated in a fiery, dark, aromatic masala paste made with black pepper, roasted spices, and fresh curry leaves.',
         'icon' => '🍗',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Crispy Andhra Chicken Vepudu.jpg',
         'ingredients' => [
             ['name' => 'Bone-in Chicken pieces', 'quantity' => 600, 'unit' => 'grams', 'notes' => 'Small curry pieces, washed clean'],
             ['name' => 'Onions', 'quantity' => 2, 'unit' => 'medium', 'notes' => 'Finely chopped'],
@@ -661,6 +674,7 @@ $recipes_part2 = [
         'description' => 'Irresistibly crunchy, tea-time fritters made with thinly sliced onions, gram flour, rice flour, crushed ginger, and curry leaves.',
         'icon' => '🧅',
         'accent_color' => '#FFE082',
+        'image' => 'assets/images/recipes/Street Style Crispy Onion Pakodi.jpg',
         'ingredients' => [
             ['name' => 'Onions', 'quantity' => 3, 'unit' => 'large', 'notes' => 'Thinly sliced lengthwise'],
             ['name' => 'Besan (Gram Flour / Senagapindi)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Sifted'],
@@ -712,6 +726,7 @@ $recipes_part2 = [
         'description' => 'Crisp golden bite-sized fritters made from fermented idli or dosa batter mixed with onions, green chillies, and cumin, served with ginger chutney.',
         'icon' => '🥟',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Crispy Andhra Street Punugulu.jpg',
         'ingredients' => [
             ['name' => 'Fermented Dosa or Idli Batter', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Slightly sour batter works best'],
             ['name' => 'Maida (All Purpose Flour) or Rice Flour', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'To adjust thick consistency'],
@@ -759,6 +774,7 @@ $recipes_part2 = [
         'description' => 'Thick round onion rings coated in a fluffy, spiced besan batter, fried to golden perfection and sprinkled with chaat masala.',
         'icon' => '🧅',
         'accent_color' => '#FFE082',
+        'image' => 'assets/images/recipes/Mirchi & Onion Bajji.jpg',
         'ingredients' => [
             ['name' => 'Onions', 'quantity' => 3, 'unit' => 'large', 'notes' => 'Peeled and sliced into thick 1/3 inch round rings'],
             ['name' => 'Besan (Gram Flour)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Sifted'],
@@ -808,6 +824,7 @@ $recipes_part2 = [
         'description' => 'Heart-shaped or oval vegetable patties made with beetroot, potatoes, carrots, and peas, coated in breadcrumbs and shallow fried until extra crispy.',
         'icon' => '🧆',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Crispy Railway Style Vegetable Cutlet.jpg',
         'ingredients' => [
             ['name' => 'Potatoes (Boiled & Mashed)', 'quantity' => 3, 'unit' => 'medium', 'notes' => 'Base binder'],
             ['name' => 'Beetroot (Grated or Boiled)', 'quantity' => 1, 'unit' => 'small', 'notes' => 'Gives stunning ruby red color'],
@@ -857,6 +874,7 @@ $recipes_part2 = [
         'description' => 'A sacred festive dessert made by slow-simmering fragrant rice in full-cream milk, sweetened with golden jaggery or sugar, and laced with cardamom and ghee-roasted nuts.',
         'icon' => '🍨',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Traditional Rice Payasam (Ksheerannam).jpg',
         'ingredients' => [
             ['name' => 'Raw Rice (Sona Masoori or Gobindobhog)', 'quantity' => 0.5, 'unit' => 'cup', 'notes' => 'Rinsed clean'],
             ['name' => 'Full Cream Whole Milk', 'quantity' => 4, 'unit' => 'cups', 'notes' => 'Rich buffalo or cow milk'],
@@ -904,6 +922,7 @@ $recipes_part2 = [
         'description' => 'A quick and delightful dessert of roasted vermicelli simmered in sweet cardamom milk, loaded with crunchy golden cashews and plump raisins.',
         'icon' => '🍨',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Quick Semiya Payasam (Vermicelli Kheer).jpg',
         'ingredients' => [
             ['name' => 'Vermicelli (Semiya)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Roasted in ghee until golden'],
             ['name' => 'Whole Milk', 'quantity' => 4, 'unit' => 'cups', 'notes' => 'Warm'],
@@ -949,6 +968,7 @@ $recipes_part2 = [
         'description' => 'Glossy, vibrant saffron-tinted semolina halwa enriched with generous desi ghee, fragrant cardamom, and golden roasted cashews.',
         'icon' => '🍮',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Traditional Melt-in-Mouth Rava Kesari.jpg',
         'ingredients' => [
             ['name' => 'Bombay Rava (Semolina / Suji)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Roasted in ghee'],
             ['name' => 'Sugar', 'quantity' => 1.25, 'unit' => 'cups', 'notes' => 'Traditional sweetness ratio'],
@@ -996,6 +1016,7 @@ $recipes_part2 = [
         'description' => 'Soft, spongy golden milk-solid dumplings slow-fried in ghee and soaked in warm, fragrant rose-cardamom sugar syrup.',
         'icon' => '🟤',
         'accent_color' => '#EFEBE9',
+        'image' => 'assets/images/recipes/Classic Melt-in-Mouth Gulab Jamun.jpg',
         'ingredients' => [
             ['name' => 'Mawa / Khoya (or Milk Powder)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Grated fine, room temperature'],
             ['name' => 'All Purpose Flour (Maida)', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'Binder'],
@@ -1045,6 +1066,7 @@ $recipes_part2 = [
         'description' => 'Rich, invigorating Indian spiced milk tea brewed with crushed fresh ginger, cardamom, cinnamon, cloves, and premium CTC tea leaves.',
         'icon' => '☕',
         'accent_color' => '#EFEBE9',
+        'image' => 'assets/images/recipes/Royal Kadak Masala Chai.jpg',
         'ingredients' => [
             ['name' => 'Fresh Water', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'For boiling spices'],
             ['name' => 'Full Cream Whole Milk', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Rich creamy milk'],

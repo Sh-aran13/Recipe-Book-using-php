@@ -17,7 +17,8 @@ $recipes_part1 = [
         'description' => 'Steamed, pillowy-soft and fluffy rice and lentil cakes. A wholesome and gut-friendly breakfast classic.',
         'icon' => '⚪',
         'accent_color' => '#FFF8E1',
-        'ingredients' => [
+        'image' => 'assets/images/recipes/Soft Mallige Idli.jpg',
+        'ingredients' => [      
             ['name' => 'Idli Rava or Parboiled Rice', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Rinse well and drain'],
             ['name' => 'Whole Urad Dal (Minapappu)', 'quantity' => 0.5, 'unit' => 'cup', 'notes' => 'Skinless white whole lentils'],
             ['name' => 'Poha (Flattened rice)', 'quantity' => 2, 'unit' => 'tablespoons', 'notes' => 'Gives extra softness'],
@@ -67,6 +68,7 @@ $recipes_part1 = [
         'description' => 'Golden-brown, crisp and paper-thin fermented crepes cooked on a flat tawa with a drizzle of pure ghee.',
         'icon' => '🥞',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Crispy Plain Dosa.jpg',
         'ingredients' => [
             ['name' => 'Raw Rice (Sona Masoori)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Rinsed clean'],
             ['name' => 'Idli / Parboiled Rice', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Adds crispness and body'],
@@ -116,6 +118,7 @@ $recipes_part1 = [
         'description' => 'Crispy golden dosa smeared with red garlic-chilli chutney and stuffed with a fragrant spiced potato filling.',
         'icon' => '🌯',
         'accent_color' => '#FFE082',
+        'image' => 'assets/images/recipes/Hotel Style Masala Dosa.jpg',
         'ingredients' => [
             ['name' => 'Fermented Dosa Batter', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Well-fermented'],
             ['name' => 'Potatoes (Aloo)', 'quantity' => 4, 'unit' => 'medium', 'notes' => 'Boiled, peeled, and gently mashed'],
@@ -168,6 +171,7 @@ $recipes_part1 = [
         'description' => 'Savory roasted semolina porridge tempered with crunchy cashews, mustard seeds, curry leaves, and ginger.',
         'icon' => '🥣',
         'accent_color' => '#FFF9C4',
+        'image' => 'assets/images/recipes/Homestyle Rava Upma.jpg',
         'ingredients' => [
             ['name' => 'Bombay Rava (Semolina/Suji)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Medium grain semolina'],
             ['name' => 'Water', 'quantity' => 2.5, 'unit' => 'cups', 'notes' => 'For soft texture (use 3 cups for extra soft)'],
@@ -221,6 +225,7 @@ $recipes_part1 = [
         'description' => 'Creamy, melt-in-the-mouth rice and yellow moong dal porridge laced with ghee, crushed black pepper, cumin, and fried cashews.',
         'icon' => '🍲',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Comforting Ven Pongal.jpg',
         'ingredients' => [
             ['name' => 'Raw Rice (Sona Masoori)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed clean'],
             ['name' => 'Yellow Moong Dal (Pesara Pappu)', 'quantity' => 0.5, 'unit' => 'cup', 'notes' => 'Lightly dry-roasted'],
@@ -272,6 +277,7 @@ $recipes_part1 = [
         'description' => 'Nutritious whole green gram (moong) crepes spiced with ginger and green chillies, topped with finely chopped onions and served with upma.',
         'icon' => '🥞',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/Andhra MLA Pesarattu.jpg',
         'ingredients' => [
             ['name' => 'Whole Green Gram (Pachhi Pesalu)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Soaked overnight (6-8 hours)'],
             ['name' => 'Raw Rice', 'quantity' => 2, 'unit' => 'tablespoons', 'notes' => 'Soaked with pesalu (gives crispness)'],
@@ -321,6 +327,7 @@ $recipes_part1 = [
         'description' => 'Crispy on the outside, fluffy and airy on the inside, golden donut-shaped lentil fritters flavored with black pepper and curry leaves.',
         'icon' => '🍩',
         'accent_color' => '#FFF8E1',
+        'image' => 'assets/images/recipes/Crispy Medu Vada.jpg',
         'ingredients' => [
             ['name' => 'Whole Urad Dal (Gundu Minapappu)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Soaked 3-4 hours only'],
             ['name' => 'Whole Black Peppercorns', 'quantity' => 1, 'unit' => 'teaspoon', 'notes' => 'Lightly crushed'],
@@ -372,6 +379,7 @@ $recipes_part1 = [
         'description' => 'Fragrant, spiced rice tossed with ripe juicy tomatoes, caramelized onions, warm spices, and fresh mint.',
         'icon' => '🍅',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Tangy Tomato Rice(Thakkali Sadam).jpg',
         'ingredients' => [
             ['name' => 'Cooked Rice (Sona Masoori or Basmati)', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Cooled, grains separated'],
             ['name' => 'Ripe Red Tomatoes', 'quantity' => 4, 'unit' => 'large', 'notes' => 'Finely chopped or puréed'],
@@ -425,6 +433,7 @@ $recipes_part1 = [
         'description' => 'Bright yellow, tangy tempered rice bursting with fresh lemon juice, crunchy roasted peanuts, mustard seeds, and ginger.',
         'icon' => '🍋',
         'accent_color' => '#FFFDE7',
+        'image' => 'assets/images/recipes/Classic Andhra Lemon Rice (Chitrannam).jpg',
         'ingredients' => [
             ['name' => 'Cooked Rice (Sona Masoori)', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Cooled, separate grains'],
             ['name' => 'Fresh Lemon Juice', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'From 2 juicy lemons'],
@@ -479,6 +488,7 @@ $recipes_part1 = [
         'description' => 'Cooling and soothing mashed rice blended with fresh yogurt and milk, tempered with mustard, ginger, curry leaves, and pomegranate seeds.',
         'icon' => '🍚',
         'accent_color' => '#F1F8E9',
+        'image' => 'assets/images/recipes/Tempered Curd Rice(Daddojanam).jpg',
         'ingredients' => [
             ['name' => 'Cooked White Rice', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Cooked slightly soft and warm'],
             ['name' => 'Fresh Yogurt (Curd)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Thick and not sour'],
@@ -530,6 +540,7 @@ $recipes_part1 = [
         'description' => 'Long-grain basmati rice gently simmered with whole spices, tender garden vegetables, and aromatic mint leaves.',
         'icon' => '🥘',
         'accent_color' => '#F9FBE7',
+        'image' => 'assets/images/recipes/Fragrant Vegetable Pulao.jpg',
         'ingredients' => [
             ['name' => 'Basmati Rice', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Rinsed and soaked for 20 minutes'],
             ['name' => 'Mixed Vegetables (Carrot, Beans, Peas, Potato)', 'quantity' => 1.5, 'unit' => 'cups', 'notes' => 'Diced evenly'],
@@ -582,6 +593,7 @@ $recipes_part1 = [
         'description' => 'Royal layered biryani featuring succulent marinated chicken, saffron-infused long grain basmati rice, caramelized onions, and fiery Andhra spices.',
         'icon' => '🍗',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Andhra Style Chicken Dum Biryani.jpg',
         'ingredients' => [
             ['name' => 'Bone-in Chicken pieces', 'quantity' => 750, 'unit' => 'grams', 'notes' => 'Cleaned, curry-cut with slits on meat'],
             ['name' => 'Basmati Rice', 'quantity' => 2.5, 'unit' => 'cups', 'notes' => 'Aged long grain, soaked 30 mins'],
@@ -637,6 +649,7 @@ $recipes_part1 = [
         'description' => 'A royal layered rice delicacy slow-cooked on dum with spiced vegetables, saffron, aromatic mint, and crispy caramelized onions.',
         'icon' => '🍲',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Hyderabadi Vegetable Dum Biryani.jpg',
         'ingredients' => [
             ['name' => 'Basmati Rice', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Aged long grain, soaked 30 mins'],
             ['name' => 'Diced Vegetables (Carrots, Beans, Potatoes, Cauliflower)', 'quantity' => 2, 'unit' => 'cups', 'notes' => 'Cut into bite-sized florets/cubes'],
@@ -687,6 +700,7 @@ $recipes_part1 = [
         'description' => 'The ultimate Andhra comfort food—toor dal cooked soft with juicy country tomatoes, tempered with crushed garlic, mustard, cumin, and ghee.',
         'icon' => '🥣',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Andhra Style Tomato Pappu.jpg',
         'ingredients' => [
             ['name' => 'Toor Dal (Kandi Pappu)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed clean'],
             ['name' => 'Country Tomatoes (Natu Tamata)', 'quantity' => 3, 'unit' => 'medium', 'notes' => 'Roughly chopped'],
@@ -740,6 +754,7 @@ $recipes_part1 = [
         'description' => 'Nutritious fresh spinach leaves cooked together with yellow lentils, tangy tamarind, green chillies, and aromatic garlic tempering.',
         'icon' => '🥬',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/Andhra Spinach Dal.jpg',
         'ingredients' => [
             ['name' => 'Toor Dal (Kandi Pappu)', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Rinsed clean'],
             ['name' => 'Fresh Spinach (Palakura)', 'quantity' => 3, 'unit' => 'cups', 'notes' => 'Washed thoroughly and finely chopped'],
@@ -789,6 +804,7 @@ $recipes_part1 = [
         'description' => 'A hearty and tangy lentil stew loaded with drumsticks, shallots, carrots, tomatoes, and freshly roasted homemade sambar powder.',
         'icon' => '🥣',
         'accent_color' => '#FFF3E0',
+        'image' => 'assets/images/recipes/Authentic Hotel Style Drumstick Sambar.jpg',
         'ingredients' => [
             ['name' => 'Toor Dal', 'quantity' => 1, 'unit' => 'cup', 'notes' => 'Cooked soft and mashed'],
             ['name' => 'Drumsticks (Munakkaya)', 'quantity' => 2, 'unit' => '', 'notes' => 'Cut into 2.5 inch finger lengths'],
@@ -844,6 +860,7 @@ $recipes_part1 = [
         'description' => 'A soothing, medicinal thin soup made with crushed ripe tomatoes, tamarind, crushed black pepper, cumin, garlic, and fresh coriander stems.',
         'icon' => '🍵',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Comforting Andhra Tomato Rasam.jpg',
         'ingredients' => [
             ['name' => 'Ripe Juicy Tomatoes', 'quantity' => 3, 'unit' => 'large', 'notes' => 'Crushed thoroughly by hand'],
             ['name' => 'Tamarind pulp', 'quantity' => 1.5, 'unit' => 'tablespoons', 'notes' => 'Extracted in warm water'],
@@ -895,6 +912,7 @@ $recipes_part1 = [
         'description' => 'Fiery and deeply flavorful country-style chicken curry infused with roasted poppy seeds, coconut, cinnamon, cloves, and spicy Guntur red chillies.',
         'icon' => '🍗',
         'accent_color' => '#FFEBEE',
+        'image' => 'assets/images/recipes/Spicy Andhra Kodi Kura.jpg',
         'ingredients' => [
             ['name' => 'Chicken (Bone-in, curry cut)', 'quantity' => 700, 'unit' => 'grams', 'notes' => 'Thoroughly washed and drained'],
             ['name' => 'Onions', 'quantity' => 2, 'unit' => 'large', 'notes' => 'Finely chopped'],
@@ -949,6 +967,7 @@ $recipes_part1 = [
         'description' => 'Tender small purple brinjals stuffed with a richly roasted peanut, sesame, coconut, and spice masala, slow-cooked in a tangy tamarind gravy.',
         'icon' => '🍆',
         'accent_color' => '#EDE7F6',
+        'image' => 'assets/images/recipes/Andhra Gutti Vankaya Koora.jpg',
         'ingredients' => [
             ['name' => 'Small Purple Brinjals (Vankayalu)', 'quantity' => 8, 'unit' => 'small', 'notes' => 'Fresh, tender with stems attached'],
             ['name' => 'Roasted Peanuts (Pallilu)', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'For masala paste'],
@@ -1002,6 +1021,7 @@ $recipes_part1 = [
         'description' => 'Crispy, non-slimy chopped okra tossed with roasted peanuts, garlic cloves, curry leaves, and spicy red chilli powder.',
         'icon' => '🥘',
         'accent_color' => '#E8F5E9',
+        'image' => 'assets/images/recipes/Crispy Andhra Bendakaya Fry (Okra Stir-Fry).jpg',
         'ingredients' => [
             ['name' => 'Fresh Okra / Bhindi (Bendakayalu)', 'quantity' => 500, 'unit' => 'grams', 'notes' => 'Washed and completely wiped dry'],
             ['name' => 'Raw Peanuts', 'quantity' => 3, 'unit' => 'tablespoons', 'notes' => 'Adds nutty crunch'],
