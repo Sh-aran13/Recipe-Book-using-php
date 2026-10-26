@@ -50,14 +50,12 @@ include __DIR__ . '/includes/header.php';
    ============================================================ */
 
 /* ---------- TYPOGRAPHY SYSTEM ---------- */
-/* Display serif for headings */
 .home-serif {
     font-family: 'Playfair Display', 'Georgia', 'Cambria', 'Times New Roman', serif;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
-/* Enhanced section eyebrow — italic serif with accent bar */
 .section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -80,7 +78,6 @@ include __DIR__ . '/includes/header.php';
     border-radius: 2px;
 }
 
-/* Enhanced section heading — big serif with decorative underline */
 .section-heading {
     font-family: 'Playfair Display', 'Georgia', serif;
     font-size: clamp(28px, 3.5vw, 40px);
@@ -103,7 +100,6 @@ include __DIR__ . '/includes/header.php';
     border-radius: 3px;
 }
 
-/* Enhanced section subheading */
 .section-subheading {
     color: var(--text-muted);
     font-size: 15.5px;
@@ -113,7 +109,6 @@ include __DIR__ . '/includes/header.php';
     font-weight: 400;
 }
 
-/* Enhanced section header wrap */
 .section-header-wrap {
     display: flex;
     align-items: flex-end;
@@ -123,7 +118,6 @@ include __DIR__ . '/includes/header.php';
     gap: 20px;
 }
 
-/* Enhanced CTA "View All" buttons */
 .btn-cta-serif {
     display: inline-flex;
     align-items: center;
@@ -240,7 +234,6 @@ include __DIR__ . '/includes/header.php';
     letter-spacing: 1px;
 }
 
-/* ELEGANT HERO HEADING */
 .hero-heading {
     font-family: 'Playfair Display', 'Georgia', serif;
     font-size: clamp(38px, 5.8vw, 62px);
@@ -282,7 +275,6 @@ include __DIR__ . '/includes/header.php';
     font-weight: 400;
 }
 
-/* BIG SEARCH BAR */
 .hero-search-form {
     max-width: 680px;
     margin: 0 auto 26px;
@@ -333,7 +325,6 @@ include __DIR__ . '/includes/header.php';
     background: linear-gradient(135deg, #C2410C 0%, #9A3412 100%);
 }
 
-/* POPULAR SEARCH TAGS */
 .popular-tags {
     display: flex;
     align-items: center;
@@ -365,7 +356,6 @@ include __DIR__ . '/includes/header.php';
     box-shadow: 0 4px 12px rgba(194, 65, 12, 0.12);
 }
 
-/* HERO STATS */
 .hero-stats-row {
     display: flex;
     justify-content: center;
@@ -384,15 +374,8 @@ include __DIR__ . '/includes/header.php';
     box-shadow: 0 4px 14px rgba(217, 119, 6, 0.1);
     backdrop-filter: blur(6px);
 }
-.hero-stat-pill-emoji {
-    font-size: 22px;
-}
-.hero-stat-pill-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
-    text-align: left;
-}
+.hero-stat-pill-emoji { font-size: 22px; }
+.hero-stat-pill-text { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
 .hero-stat-pill-num {
     font-family: 'Playfair Display', 'Georgia', serif;
     font-size: 20px;
@@ -409,9 +392,7 @@ include __DIR__ . '/includes/header.php';
 }
 
 /* ---------- SECTION WRAPPER ---------- */
-.home-section {
-    padding: 64px 0;
-}
+.home-section { padding: 64px 0; }
 .home-section--warm {
     background: linear-gradient(180deg, var(--bg-warm) 0%, #FFFDF9 100%);
     border-top: 1px solid var(--border-warm);
@@ -422,169 +403,460 @@ include __DIR__ . '/includes/header.php';
     border-top: 1px solid var(--border-warm);
 }
 
-/* ---------- TODAY'S SPECIAL BANNER ---------- */
+/* ============================================================
+   TODAY'S SPECIAL — NEXT-LEVEL REDESIGN
+   ============================================================ */
+.special-section-wrapper {
+    position: relative;
+    padding: 30px 0 40px;
+}
 .special-banner {
     position: relative;
-    background: linear-gradient(135deg, #FFF8EE 0%, #FFFFFF 55%, #FFF1EB 100%);
+    background: linear-gradient(135deg, #FFF8EE 0%, #FFFFFF 45%, #FFF1EB 75%, #FEF3C7 100%);
     border: 2px solid #FED7AA;
-    border-radius: 24px;
-    padding: 32px;
-    box-shadow: 0 16px 40px -12px rgba(194, 65, 12, 0.14), 0 6px 16px rgba(69, 26, 3, 0.05);
+    border-radius: 32px;
+    padding: 36px;
+    box-shadow:
+        0 24px 60px -16px rgba(194, 65, 12, 0.18),
+        0 8px 24px -6px rgba(69, 26, 3, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    gap: 36px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 40px;
     align-items: center;
     overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+.special-banner:hover {
+    box-shadow:
+        0 32px 72px -16px rgba(194, 65, 12, 0.22),
+        0 12px 32px -8px rgba(69, 26, 3, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 .special-banner::before {
     content: '';
     position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 220px;
-    height: 220px;
+    top: -100px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(253, 230, 138, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(253, 230, 138, 0.35) 0%, transparent 70%);
     pointer-events: none;
+    animation: floatSlow 12s ease-in-out infinite;
 }
+.special-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(251, 146, 60, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    animation: floatSlow 12s ease-in-out infinite reverse;
+}
+@keyframes floatSlow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(15px, -15px) scale(1.05); }
+}
+
+/* Visual (image/emoji) */
 .special-visual {
     position: relative;
-    border-radius: 18px;
-    height: 320px;
+    border-radius: 22px;
+    height: 360px;
     overflow: hidden;
-    border: 1px solid var(--border-warm);
+    border: 3px solid #FFFFFF;
     background: var(--bg-warm);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 24px -6px rgba(69, 26, 3, 0.1);
+    box-shadow:
+        0 20px 40px -12px rgba(69, 26, 3, 0.18),
+        0 8px 16px -4px rgba(69, 26, 3, 0.08);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.special-banner:hover .special-visual {
+    transform: translateY(-4px) scale(1.015);
 }
 .special-visual-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .special-banner:hover .special-visual-img {
-    transform: scale(1.06);
+    transform: scale(1.08);
 }
 .special-visual-emoji {
-    font-size: 110px;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
-    transition: transform 0.5s ease;
+    font-size: 130px;
+    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.18));
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .special-banner:hover .special-visual-emoji {
-    transform: scale(1.1) rotate(-4deg);
+    transform: scale(1.12) rotate(-5deg);
 }
 .special-visual::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, transparent 40%, rgba(0,0,0,0.4) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, transparent 55%, rgba(0,0,0,0.5) 100%);
     pointer-events: none;
     z-index: 1;
 }
+
+/* Animated Today's Special badge */
 .special-badge-tl {
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: 16px;
+    left: 16px;
     background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
     color: #FFF;
     font-size: 11px;
     font-weight: 800;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: var(--radius-pill);
-    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+    box-shadow:
+        0 6px 20px rgba(220, 38, 38, 0.45),
+        0 0 0 3px rgba(255, 255, 255, 0.35);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     z-index: 3;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
+    animation: badgePulse 2.5s ease-in-out infinite;
 }
-.special-badge-br {
-    position: absolute;
-    bottom: 14px;
-    right: 14px;
-    background: rgba(255, 255, 255, 0.96);
-    font-size: 12px;
-    font-weight: 800;
-    padding: 5px 14px;
-    border-radius: var(--radius-pill);
-    color: var(--earth-brown);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    backdrop-filter: blur(6px);
-    z-index: 3;
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.35);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.65), 0 0 0 5px rgba(255, 255, 255, 0.15);
+    }
+}
+.special-badge-tl span:first-child {
+    animation: starTwinkle 2s ease-in-out infinite;
+    display: inline-block;
+}
+@keyframes starTwinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.15) rotate(15deg); opacity: 0.9; }
 }
 
+/* Category badge bottom-right */
+.special-badge-br {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.98);
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 7px 16px;
+    border-radius: var(--radius-pill);
+    color: var(--earth-brown);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+    z-index: 3;
+    letter-spacing: -0.1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.special-badge-br::before {
+    content: '📍';
+    font-size: 10px;
+}
+
+/* Details */
+.special-details {
+    position: relative;
+    z-index: 2;
+}
 .special-details-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--primary);
     font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
     font-style: italic;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
+    letter-spacing: 0.4px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    padding: 7px 16px 7px 14px;
+    border-radius: var(--radius-pill);
+    border: 1px solid #FCD34D;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.12);
 }
 .special-details-eyebrow::before {
+    content: '✨';
+    font-size: 14px;
+    animation: sparkle 2s ease-in-out infinite;
+    display: inline-block;
+}
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Next-level title */
+.special-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: clamp(30px, 3.4vw, 42px);
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 10px;
+    letter-spacing: -1.2px;
+    background: linear-gradient(135deg, #451A03 0%, #7C2D12 50%, #C2410C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+.special-telugu {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.special-telugu::before {
     content: '';
-    width: 26px;
+    width: 22px;
     height: 2px;
     background: linear-gradient(90deg, var(--primary) 0%, #FDBA74 100%);
     border-radius: 2px;
 }
-.special-title {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: clamp(28px, 3vw, 38px);
-    font-weight: 800;
-    color: var(--earth-brown);
-    line-height: 1.15;
-    margin-bottom: 8px;
-    letter-spacing: -0.8px;
-}
-.special-telugu {
-    color: var(--primary);
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-weight: 600;
-    font-size: 17px;
-    margin-bottom: 14px;
-    font-style: italic;
-    letter-spacing: 0.2px;
-}
 .special-desc {
     color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 22px;
+    font-size: 15.5px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+    max-width: 560px;
 }
+
+/* Enhanced meta pills */
 .special-meta-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 .special-meta-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 700;
-    color: var(--text-muted);
-    background: #FFF;
-    padding: 7px 14px;
+    color: var(--earth-brown);
+    background: #FFFFFF;
+    padding: 8px 14px;
     border-radius: var(--radius-pill);
-    border: 1px solid var(--border-warm);
-    box-shadow: 0 1px 3px rgba(69, 26, 3, 0.05);
+    border: 1.5px solid #FED7AA;
+    box-shadow: 0 2px 6px rgba(69, 26, 3, 0.06);
+    transition: all 0.22s ease;
+    white-space: nowrap;
 }
+.special-meta-pill:hover {
+    border-color: #FCD34D;
+    background: #FFFDF9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(217, 119, 6, 0.12);
+}
+
+/* Diet badge */
+.diet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1.5px solid;
+    white-space: nowrap;
+}
+.diet-badge.veg {
+    background: #F0FDF4;
+    color: #15803D;
+    border-color: #BBF7D0;
+}
+.diet-badge.veg .diet-dot {
+    background: #16A34A;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+.diet-badge.non-veg {
+    background: #FEF2F2;
+    color: #B91C1C;
+    border-color: #FECACA;
+}
+.diet-badge.non-veg .diet-dot {
+    background: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+.diet-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   NEXT-LEVEL CTA BUTTONS
+   ============================================================ */
 .special-cta-row {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+/* PRIMARY: "Cook Today's Special" */
+.btn-special-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(135deg, #EA580C 0%, #C2410C 55%, #9A3412 100%);
+    color: #FFFFFF !important;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow:
+        0 8px 24px -4px rgba(194, 65, 12, 0.45),
+        0 3px 10px -2px rgba(194, 65, 12, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    isolation: isolate;
+}
+.btn-special-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 55%, #C2410C 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.btn-special-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.35) 50%, transparent 100%);
+    transition: left 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+.btn-special-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 14px 32px -6px rgba(194, 65, 12, 0.55),
+        0 6px 16px -3px rgba(194, 65, 12, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: #FFFFFF !important;
+}
+.btn-special-primary:hover::before {
+    opacity: 1;
+}
+.btn-special-primary:hover::after {
+    left: 100%;
+}
+.btn-special-primary .btn-icon {
+    font-size: 17px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+.btn-special-primary:hover .btn-icon {
+    transform: scale(1.15) rotate(-8deg);
+}
+.btn-special-primary .btn-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+.btn-special-primary:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* SECONDARY: "Browse Full Menu" */
+.btn-special-secondary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 26px;
+    border-radius: var(--radius-pill);
+    background: #FFFFFF;
+    color: var(--earth-brown) !important;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    border: 1.5px solid #FCD34D;
+    box-shadow: 0 3px 10px rgba(217, 119, 6, 0.12);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    isolation: isolate;
+}
+.btn-special-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #FFF8EE 0%, #FEF3C7 100%);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+.btn-special-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -4px rgba(194, 65, 12, 0.25);
+}
+.btn-special-secondary:hover::before {
+    background: linear-gradient(135deg, #FFF1EB 0%, #FEE9D9 100%);
+}
+.btn-special-secondary .btn-icon {
+    font-size: 15px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+.btn-special-secondary:hover .btn-icon {
+    transform: rotate(-12deg) scale(1.1);
+}
+.btn-special-secondary .btn-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    opacity: 0.85;
+}
+.btn-special-secondary:hover .btn-arrow {
+    transform: translateX(4px);
+    opacity: 1;
 }
 
 /* ---------- RESCUE BANNER ---------- */
@@ -681,10 +953,7 @@ include __DIR__ . '/includes/header.php';
     border-color: #FDBA74;
     box-shadow: 0 8px 20px rgba(194, 65, 12, 0.15);
 }
-.rescue-tile-emoji {
-    font-size: 26px;
-    line-height: 1;
-}
+.rescue-tile-emoji { font-size: 26px; line-height: 1; }
 .rescue-tile-title {
     font-family: 'Playfair Display', 'Georgia', serif;
     font-size: 14.5px;
@@ -771,7 +1040,7 @@ include __DIR__ . '/includes/header.php';
     font-weight: 700;
 }
 
-/* ---------- ENHANCED RECIPE CARDS ---------- */
+/* ---------- RECIPE CARDS ---------- */
 .recipes-enhanced-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -821,9 +1090,7 @@ include __DIR__ . '/includes/header.php';
     object-fit: cover;
     transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.rcard:hover .rcard-img {
-    transform: scale(1.1);
-}
+.rcard:hover .rcard-img { transform: scale(1.1); }
 .rcard-placeholder {
     width: 100%;
     height: 100%;
@@ -834,9 +1101,7 @@ include __DIR__ . '/includes/header.php';
     filter: drop-shadow(0 6px 12px rgba(69, 26, 3, 0.15));
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.rcard:hover .rcard-placeholder {
-    transform: scale(1.15) rotate(-4deg);
-}
+.rcard:hover .rcard-placeholder { transform: scale(1.15) rotate(-4deg); }
 .rcard-badges-top {
     position: absolute;
     top: 14px;
@@ -982,7 +1247,6 @@ include __DIR__ . '/includes/header.php';
     color: var(--text-light);
     font-weight: 600;
 }
-/* Enhanced card title serif */
 .rcard-title {
     font-family: 'Playfair Display', 'Georgia', serif;
     font-size: 20px;
@@ -1001,9 +1265,7 @@ include __DIR__ . '/includes/header.php';
     color: inherit;
     transition: var(--transition);
 }
-.rcard-title a:hover {
-    color: var(--primary);
-}
+.rcard-title a:hover { color: var(--primary); }
 .rcard-telugu {
     font-size: 13px;
     color: var(--primary);
@@ -1066,9 +1328,9 @@ include __DIR__ . '/includes/header.php';
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-    .special-banner { grid-template-columns: 1fr; padding: 24px; }
-    .special-visual { height: 260px; }
-    .special-title { font-size: 26px; }
+    .special-banner { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+    .special-visual { height: 280px; }
+    .special-title { font-size: 28px; }
     .rescue-banner { grid-template-columns: 1fr; padding: 26px; }
     .rescue-title { font-size: 26px; }
     .recipes-enhanced-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; }
@@ -1104,30 +1366,38 @@ include __DIR__ . '/includes/header.php';
         justify-content: center; 
     }
     
-    .popular-tags { 
-        justify-content: center; 
-        gap: 6px; 
-        margin-top: 14px; 
-    }
-    .popular-tag { 
-        font-size: 12px; 
-        padding: 5px 10px; 
-    }
+    .popular-tags { justify-content: center; gap: 6px; margin-top: 14px; }
+    .popular-tag { font-size: 12px; padding: 5px 10px; }
     
-    .hero-stats-row { 
-        gap: 8px; 
-        margin-top: 20px; 
-        justify-content: center; 
-    }
+    .hero-stats-row { gap: 8px; margin-top: 20px; justify-content: center; }
     .hero-stat-pill { padding: 6px 12px; }
     .hero-stat-pill-emoji { font-size: 16px; }
     .hero-stat-pill-num { font-size: 15px; }
     .hero-stat-pill-label { font-size: 9px; }
     
-    .special-banner { padding: 18px; border-radius: 18px; }
-    .special-visual { height: 200px; }
-    .special-title { font-size: 22px; }
-    .special-desc { font-size: 13.5px; }
+    /* Today's Special Mobile */
+    .special-section-wrapper { padding: 20px 0 30px; }
+    .special-banner { padding: 20px; border-radius: 24px; gap: 20px; }
+    .special-visual { height: 220px; border-radius: 16px; border-width: 2px; }
+    .special-visual-emoji { font-size: 84px; }
+    .special-title { font-size: 24px; letter-spacing: -0.8px; }
+    .special-telugu { font-size: 15px; margin-bottom: 12px; }
+    .special-desc { font-size: 13.5px; line-height: 1.6; margin-bottom: 16px; }
+    .special-details-eyebrow { font-size: 12px; padding: 5px 12px; margin-bottom: 10px; }
+    .special-meta-row { gap: 6px; margin-bottom: 18px; }
+    .special-meta-pill { font-size: 11.5px; padding: 6px 11px; }
+    .diet-badge { font-size: 10.5px; padding: 6px 11px; }
+    
+    /* Next-level CTA buttons mobile */
+    .special-cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+    .btn-special-primary,
+    .btn-special-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 22px;
+        font-size: 14px;
+    }
+    .btn-special-primary { font-size: 14.5px; }
     
     .rescue-banner { padding: 20px 18px; border-radius: 18px; }
     .rescue-title { font-size: 22px; }
@@ -1156,10 +1426,12 @@ include __DIR__ . '/includes/header.php';
     .hero-heading { font-size: 25px; }
     .category-grid { grid-template-columns: 1fr; }
     .rescue-tiles-grid { grid-template-columns: 1fr; }
+    .special-visual { height: 180px; }
+    .special-title { font-size: 22px; }
 }
 </style>
 
-<!-- Load Playfair Display from Google Fonts (graceful fallback to Georgia) -->
+<!-- Load Playfair Display from Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -1185,7 +1457,6 @@ include __DIR__ . '/includes/header.php';
                 Simple ingredients. Easy steps. Delicious homemade food. Designed specially for you to cook everyday family favorites with confidence.
             </p>
 
-            <!-- BIG SEARCH BAR -->
             <form action="recipes.php" method="GET" class="hero-search-form" role="search">
                 <div class="hero-search-inner">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2.5" style="margin-right: 12px; flex-shrink: 0;">
@@ -1205,7 +1476,6 @@ include __DIR__ . '/includes/header.php';
                 </div>
             </form>
 
-            <!-- POPULAR TAGS -->
             <div class="popular-tags">
                 <span style="font-weight: 700;">Popular:</span>
                 <a href="recipes.php?q=Dosa" class="popular-tag">🥞 Dosa</a>
@@ -1215,7 +1485,6 @@ include __DIR__ . '/includes/header.php';
                 <a href="recipes.php?q=Payasam" class="popular-tag">🍨 Payasam</a>
             </div>
 
-            <!-- HERO STATS -->
             <div class="hero-stats-row">
                 <div class="hero-stat-pill">
                     <span class="hero-stat-pill-emoji">📖</span>
@@ -1245,9 +1514,9 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- ============================================================
-     SECTION 1: TODAY'S SPECIAL
+     SECTION 1: TODAY'S SPECIAL (NEXT-LEVEL DESIGN)
      ============================================================ -->
-<section class="home-section" style="padding-bottom: 30px;" aria-label="Today's special">
+<section class="home-section special-section-wrapper" style="padding-top: 30px; padding-bottom: 30px;" aria-label="Today's special">
     <div class="container">
         <div class="special-banner">
 
@@ -1266,7 +1535,7 @@ include __DIR__ . '/includes/header.php';
             </div>
 
             <!-- Details -->
-            <div>
+            <div class="special-details">
                 <div class="special-details-eyebrow">Fresh Daily Pick</div>
                 <h2 class="special-title"><?= h($todaysSpecial['name']) ?></h2>
                 <?php if (!empty($todaysSpecial['regional_name'])): ?>
@@ -1290,10 +1559,16 @@ include __DIR__ . '/includes/header.php';
                 </div>
 
                 <div class="special-cta-row">
-                    <a href="recipe.php?id=<?= urlencode($todaysSpecial['id']) ?>" class="btn btn-primary" style="padding: 12px 26px;">
-                        Cook Today's Special →
+                    <a href="recipe.php?id=<?= urlencode($todaysSpecial['id']) ?>" class="btn-special-primary">
+                        <span class="btn-icon">🍳</span>
+                        <span>Cook Today's Special</span>
+                        <span class="btn-arrow">→</span>
                     </a>
-                    <a href="recipes.php" class="btn btn-secondary">Browse Full Menu</a>
+                    <a href="recipes.php" class="btn-special-secondary">
+                        <span class="btn-icon">📖</span>
+                        <span>Browse Full Menu</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
                 </div>
             </div>
 
@@ -1455,7 +1730,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- ============================================================
-     SECTION 6: RECENTLY VIEWED (Dynamic via localStorage)
+     SECTION 6: RECENTLY VIEWED
      ============================================================ -->
 <section id="recentRecipesSection" class="home-section home-section--warm" style="display: none;" aria-label="Recently viewed recipes">
     <div class="container">
@@ -1471,16 +1746,13 @@ include __DIR__ . '/includes/header.php';
             </button>
         </div>
 
-        <div class="recipes-enhanced-grid" id="recentRecipesGrid">
-            <!-- Populated via JS -->
-        </div>
+        <div class="recipes-enhanced-grid" id="recentRecipesGrid"></div>
     </div>
 </section>
 
 <?php
 /**
  * Helper renderer for enhanced recipe cards on homepage.
- * Uses same visual language as recipes.php cards.
  */
 function render_enhanced_recipe_card(array $r): void {
     $isVeg = strtolower($r['type'] ?? 'Vegetarian') === 'vegetarian';
